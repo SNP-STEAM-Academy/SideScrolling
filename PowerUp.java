@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PowerUp here.
+ * The PowerUp class will give the ship that collected it an upgrade
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Nicodemus Allan 
+ * @version March 4, 2022
  */
 public class PowerUp extends A_PowerUp
 {
