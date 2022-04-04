@@ -30,3 +30,4 @@ What is being evaluated?
 - 5 Uses Github properly
 - 5 Uses priniciples of OOP
 - 5 Video reflection
+***Totals 30%***
