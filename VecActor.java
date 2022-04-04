@@ -16,4 +16,40 @@ public class VecActor extends A_VecActor
     {
         // Add your action code here.
     }
+    
+    public void move(){//use the mag and direction of the vel to move
+        
+    }
+    
+    public void setVel(double vx, double vy){
+        
+    }
+    
+    public void setVel(Vector v){
+        
+    }
+    
+    public Vector getVel(){
+        return vel;
+    }
+    
+    public Vector getPos(){
+        return pos;
+    }
+    
+    public void setLocation(int x, int y){
+        
+    }
+    
+    public void setLocation(double x, double y){
+        
+    }
+    
+    public void setLocation(Vector p){
+        
+    }
+    
+    public int getRotation(){
+        return 0;
+    }
 }
