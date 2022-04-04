@@ -6,14 +6,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class A_Bullet extends Actor
+public abstract class A_Bullet extends Actor
 {
-    /**
-     * Act - do whatever the A_Bullet wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act()
-    {
-        // Add your action code here.
-    }
+    protected double speed;
+    protected int damage;
+    
+    public abstract void act();
+    protected abstract void causeDamage();
 }
