@@ -8,14 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bullet extends A_Bullet
 {
-    public Bullet()
+    public Bullet(int speed)
     {
-        
+        this.speed = speed;
     }
     
     public void act()
     {
-        
+        move(speed);
     }
     
     protected void causeDamage()
@@ -25,6 +25,14 @@ public class Bullet extends A_Bullet
     
     protected void checkBounds()
     {
-        
+        if (world == null)
+        {
+            world = getWorld();
+        }
+        if (getX() > world.getWidth())
+        {
+            world.removeObject(this);
+            return;
+        }
     }
 }
