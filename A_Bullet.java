@@ -13,4 +13,5 @@ public abstract class A_Bullet extends Actor
     
     public abstract void act();
     protected abstract void causeDamage();
+    protected abstract void checkBounds();
 }

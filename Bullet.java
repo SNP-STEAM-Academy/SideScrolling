@@ -22,4 +22,9 @@ public class Bullet extends A_Bullet
     {
         
     }
+    
+    protected void checkBounds()
+    {
+        
+    }
 }
