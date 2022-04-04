@@ -16,11 +16,11 @@ public class Vector extends A_Vector
         
     }
 
-    public void add(AVector other){
+    public void add(A_Vector other){
         
     }
     
-    public void sub(AVector other){
+    public void sub(A_Vector other){
         
     }
     

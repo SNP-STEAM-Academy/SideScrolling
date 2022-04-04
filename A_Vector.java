@@ -17,8 +17,8 @@ public abstract class A_Vector
     protected double angle;
     protected double mag;
     
-    public abstract void add(AVector other);
-    public abstract void sub(AVector other);
+    public abstract void add(A_Vector other);
+    public abstract void sub(A_Vector other);
     public abstract void scale(double num);
     
     public abstract void normalize();

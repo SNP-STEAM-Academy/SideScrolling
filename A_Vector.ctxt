@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=A_Vector
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ AVector\ here.\r\n\ \r\n\ A\ Vector\ has\:\r\n\ \ x,\ y,\ angle,\ magnitude\r\n\ \r\n\ A\ Vector\ does\:\r\n\ add,\ sub,\ scale,\ normalize,\ calcAngle,\ calcMag\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=other
+comment1.target=void\ add(A_Vector)
+comment2.params=other
+comment2.target=void\ sub(A_Vector)
+comment3.params=num
+comment3.target=void\ scale(double)
+comment4.params=
+comment4.target=void\ normalize()
+comment5.params=
+comment5.target=double\ calcAngle()
+comment6.params=
+comment6.target=double\ calcMag()
+comment7.params=
+comment7.target=double\ getX()
+comment8.params=
+comment8.target=double\ getY()
+comment9.params=
+comment9.target=double[]\ asArray()
+numComments=10
