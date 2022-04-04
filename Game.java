@@ -16,4 +16,20 @@ public class Game extends A_Game
     public Game()
     {
     }
+    
+    protected void updateBackground(){
+        
+    }
+    
+    public void start(){
+        
+    }
+    
+    protected void pause(){
+        
+    }
+    
+    protected void reset(){
+        
+    }
 }
