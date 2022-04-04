@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Bullet here.
+ * The Bullet class will control the basic functions of the bullet such as movement, damage and, bonderyChecking.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Nicodemus Allan 
+ * @version March 4, 2022
  */
 public class Bullet extends A_Bullet
 {
