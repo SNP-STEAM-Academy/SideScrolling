@@ -20,3 +20,13 @@ Currently this project only has essential abstract classes and interfaces.
 - Mr R 
   - Asteroid class
 
+What is being evaluated?
+
+- 10 Contributions
+  - Consistent
+  - Useful
+  - Insightful
+- 5 Participation in standup meetings, github documentation
+- 5 Uses Github properly
+- 5 Uses priniciples of OOP
+- 5 Video reflection
