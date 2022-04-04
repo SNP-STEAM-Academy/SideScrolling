@@ -2,8 +2,8 @@
 comment0.target=Ship
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Ship\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Ship\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.target=void\ setHealthbar()
+comment1.text=\r\n\ \r\n\ Everything\ from\ I_Damageable\ that\ is\ needed\ here\ in\ ship\ This\ is\ just\ a\ big\ list\ of\ all\ the\ stuff\ from\ the\ implement\r\n\ \r\n\ from\ setHealthBar\ down\ to\ getHealth\r\n\ \r\n
 comment2.params=amount
 comment2.target=void\ damage(int)
 comment3.params=amount
