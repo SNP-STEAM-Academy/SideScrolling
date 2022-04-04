@@ -1,28 +1,74 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Ship here.
+ * This is where the magic of the ship happens, brings in everything from elsewhere. Makes ship do all the stuff
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Cole Spiers
+ * @version April 4th, 2022
  */
 public class Ship extends A_Ship
 {
-    //double speed = 0; 
-    //int maxSpeed = 10;
-    //double thrust = 0.5;
-    //double thrustBack = 0.25;
-    //int turnSpeed = 4;
-    //int shotcooldown = 15;
-    //int shotTimer = 0;
-    int Health;
+    /**
+     * Main ship stuff
+     */
+    public Ship()
+    {
+        
+    }
     
-    //World world;
-    //GreenfootImage img;
-    //MouseInfo mouse;
     
-    //Healthbar healthbar;
-    //int maxhealth = 600;
+    
+    public void act()
+    {
+        if (world == null)
+        {
+            world = getWorld();
+        }
+        
+        checkKeys();
+        checkBounds();
+        
+        Asteroid temp = (Asteroid)getOneIntersectingObject(Asteroid.class);
+        
+        //mouse info
+        mouse = Greenfoot.getMouseInfo();
+    }
+    
+    
+    
+    void checkKeys()
+    {
+        // if (Greenfoot.isKeyDown("w")&& speed < maxSpeed)
+        // {
+            // speed += thrust;
+        // }
+        
+        // if (Greenfoot.isKeyDown("a"))
+        // {
+            // turn(-turnSpeed);
+        // }
+        
+        // if (Greenfoot.isKeyDown("s")&& speed > 0)
+        // {
+            // speed -= thrustBack;
+        // }
+        
+        // if (Greenfoot.isKeyDown("d"))
+        // {
+            // turn(+turnSpeed);
+        // }
+        
+        // if (Greenfoot.isKeyDown("space")&& shotTimer > shotcooldown)
+        // {
+            // //shoooting
+        // }
+    }
+    
+    void checkBounds()
+    {
+        
+    }
+    
     /**
      * 
      * Everything from I_Damageable that is needed here in ship This is just a big list of all the stuff from the implement

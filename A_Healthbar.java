@@ -1,12 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Healthbar here.
+ * A_Healthbar is here just to hold variables for the actual Healthbar class
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Cole Spiers 
+ * @version April 4th, 2022
  */
 public abstract class A_Healthbar extends Actor
 {
-    
+    protected int health;
+    Ship owner;
+    GreenfootImage img;
 }
