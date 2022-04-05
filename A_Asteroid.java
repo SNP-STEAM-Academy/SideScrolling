@@ -39,9 +39,5 @@ public abstract class A_Asteroid extends VecActor {
      */
     public abstract void split();
     
-    /**
-     * Method getHealth
-     */
-    public abstract int getHealth();
     
 }// end

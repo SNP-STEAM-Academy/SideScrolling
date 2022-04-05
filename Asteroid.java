@@ -142,23 +142,7 @@ public class Asteroid extends A_Asteroid {
     
     
     }// end split()
-    
-    
-    
-    
-    
-    /**
-     * Method getHealth
-     *  
-     * @return health
-     *
-     */
-    public int getHealth() {//a health getter method
-        
-       return Health; 
-       
-    }// end etHealth()
-    
+
     
     
     
