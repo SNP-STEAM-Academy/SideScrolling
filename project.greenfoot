@@ -21,9 +21,15 @@ editor.fx.0.height=704
 editor.fx.0.width=1294
 editor.fx.0.x=-7
 editor.fx.0.y=-7
+<<<<<<< HEAD
 height=694
 package.numDependencies=6
 package.numTargets=27
+=======
+height=734
+package.numDependencies=4
+package.numTargets=29
+>>>>>>> dba18bc9b9de63b01eab4de06e0fb02ca1d55272
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -228,6 +234,10 @@ target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=1292
+=======
+width=1294
+>>>>>>> dba18bc9b9de63b01eab4de06e0fb02ca1d55272
 xPosition=0
 yPosition=1
