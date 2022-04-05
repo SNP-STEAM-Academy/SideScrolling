@@ -17,10 +17,14 @@ public abstract class A_VecActor extends Actor
     public abstract void setVel(Vector v);
     public abstract Vector getVel();
     public abstract Vector getPos();
-    public abstract void setLocation(int x, int y);
+    public void setLocation(int x, int y){
+        super.setLocation(x, y);
+    }
     public abstract void setLocation(double x, double y);
     public abstract void setLocation(Vector p);
     
-    public abstract int getRotation();
+    public int getRotation(){
+        return (int)vel.calcAngle();
+    }
     
 }
