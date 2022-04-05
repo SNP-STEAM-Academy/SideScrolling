@@ -1,7 +1,14 @@
 #BlueJ class context
 comment0.target=Healthbar
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Healthbar\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Healthbar\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=2
+comment0.text=\r\n\ This\ is\ the\ Healthbar\ class\ it\ is\ making\ the\ healthbar\ and\ doing\ anything\ involved\ with\ the\ healthbar\r\n\ \r\n\ @author\ Cole\ Spiers\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=h
+comment1.target=void\ HealthBar(int)
+comment2.params=s
+comment2.target=void\ HealthBar(Ship)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=int\ getHealth()
+comment5.params=h
+comment5.target=void\ setHealth(int)
+numComments=6

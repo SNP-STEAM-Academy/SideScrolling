@@ -15,6 +15,7 @@ public class Game extends A_Game
      */
     public Game()
     {
+        
     }
     
     protected void updateBackground(){
