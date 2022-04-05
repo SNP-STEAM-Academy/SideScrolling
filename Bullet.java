@@ -25,7 +25,7 @@ public class Bullet extends A_Bullet
     public void act()
     {
         move(speed);
-        //checkBounds(); might cause a null pointer. Waiting until this can be tested.
+        //checkBounds();
     }
     
     protected void causeDamage()
