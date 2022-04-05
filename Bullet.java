@@ -25,7 +25,7 @@ public class Bullet extends A_Bullet
     public void act()
     {
         move(speed);
-        //checkBounds();
+        checkBounds();
     }
     
     protected void causeDamage()
