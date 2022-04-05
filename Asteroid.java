@@ -3,29 +3,34 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Asteroid here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Luca Quacquarelli) 
+ * @date 2022-04-05
  */
-public class Asteroid extends A_Asteroid
-{
+public class Asteroid extends A_Asteroid {
+    
+    
+    
+    
+    
     /**
      * Act - do whatever the Asteroid wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
-    {
-        // Add your action code here.
-    }
+    public void act() {
+       
+    }// end act()
+    
+    
     
     
     
     /**
      * Method collide has not been created yet. 
      */
-    public void collide(){
+    public void collide() {
     
     
-    }
+    }// end collide()
     
     
     
@@ -34,9 +39,29 @@ public class Asteroid extends A_Asteroid
     /**
      * Method split has not been created yet. 
      */
-    public void split(){
+    public void split() {
     
     
-    }
+    }// end split()
+    
+    
+    
+    
+    
+    /**
+     * Method getHealth
+     *  
+     * @return health
+     *
+     */
+    public int getHealth() {//a health getter method
+        
+       return Health; 
+       
+    }// end etHealth()
+    
+    
+    
+    
     
 }
