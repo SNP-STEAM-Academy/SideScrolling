@@ -11,13 +11,13 @@ public abstract class A_Asteroid extends VecActor {
     
     // size  variables
     protected int size;
-    protected int minSize;
-    protected int maxSize;
+    protected int minSize = 20;
+    protected int maxSize = 150;
     
     // speed variables 
-    protected double speed; 
-    protected double minSpeed;
-    protected double maxSpeed;
+    protected double speed = 0; 
+    protected double minSpeed = 2;
+    protected double maxSpeed = 10;
     
     protected int damage;
     protected int Health;
@@ -26,8 +26,8 @@ public abstract class A_Asteroid extends VecActor {
     protected String name;
     
     // Game and image variables 
-    //GreenfootImage img;
-    //Game game;
+    GreenfootImage img;
+    Game game;
     
     
     /**
