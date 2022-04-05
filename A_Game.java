@@ -34,18 +34,13 @@ public abstract class A_Game extends World
     
     Ship ship;
     PowerUp powerup;
-    World world;
     //TitleScreen title;
     //PauseMenu pause;
     
     private int lives = 3;
-    
     private int Spawncooldown = 10;
     private int Minspawncooldown = 25;
     private int Maxspawncooldown = 75;
-    
-    
-    
     
     /**
      * Constructor for objects of class AGame.
