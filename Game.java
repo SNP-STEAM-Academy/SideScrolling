@@ -15,6 +15,7 @@ public class Game extends A_Game
      */
     public Game()
     {
+<<<<<<< HEAD
         ship = new Ship();
         addObject(ship, getWidth()/2, getHeight()/2);
         
@@ -43,6 +44,9 @@ public class Game extends A_Game
             // pause.setGame(this);
             // Greenfoot.setWorld(pause);
         // }
+=======
+        
+>>>>>>> f8c71cd35be94229b6e1e22ebc2709e31768bcc9
     }
     
     public void act()

@@ -10,6 +10,7 @@ dependency10.type=UsesDependency
 dependency2.from=A_Game
 dependency2.to=UI
 dependency2.type=UsesDependency
+<<<<<<< HEAD
 dependency3.from=A_Game
 dependency3.to=Ship
 dependency3.type=UsesDependency
@@ -37,6 +38,20 @@ editor.fx.0.x=-7
 editor.fx.0.y=-7
 height=694
 package.numDependencies=10
+=======
+dependency3.from=A_VecActor
+dependency3.to=Vector
+dependency3.type=UsesDependency
+dependency4.from=VecActor
+dependency4.to=Vector
+dependency4.type=UsesDependency
+editor.fx.0.height=734
+editor.fx.0.width=1294
+editor.fx.0.x=-7
+editor.fx.0.y=-7
+height=734
+package.numDependencies=4
+>>>>>>> f8c71cd35be94229b6e1e22ebc2709e31768bcc9
 package.numTargets=31
 project.charset=UTF-8
 publish.hasSource=false
@@ -151,37 +166,57 @@ target21.width=120
 target21.x=0
 target21.y=0
 target22.height=70
+<<<<<<< HEAD
 target22.name=I_Upgradeable
+=======
+target22.name=A_VecActor
+>>>>>>> f8c71cd35be94229b6e1e22ebc2709e31768bcc9
 target22.showInterface=false
-target22.type=ClassTarget
+target22.type=AbstractTarget
 target22.width=120
 target22.x=0
 target22.y=0
 target23.height=70
+<<<<<<< HEAD
 target23.name=A_VecActor
+=======
+target23.name=A_PowerUp
+>>>>>>> f8c71cd35be94229b6e1e22ebc2709e31768bcc9
 target23.showInterface=false
 target23.type=AbstractTarget
 target23.width=120
 target23.x=0
 target23.y=0
 target24.height=70
+<<<<<<< HEAD
 target24.name=A_PowerUp
+=======
+target24.name=Wave
+>>>>>>> f8c71cd35be94229b6e1e22ebc2709e31768bcc9
 target24.showInterface=false
-target24.type=AbstractTarget
+target24.type=ClassTarget
 target24.width=120
 target24.x=0
 target24.y=0
 target25.height=70
+<<<<<<< HEAD
 target25.name=Wave
+=======
+target25.name=Game
+>>>>>>> f8c71cd35be94229b6e1e22ebc2709e31768bcc9
 target25.showInterface=false
 target25.type=ClassTarget
 target25.width=120
 target25.x=0
 target25.y=0
 target26.height=70
+<<<<<<< HEAD
 target26.name=Game
+=======
+target26.name=A_Weapon
+>>>>>>> f8c71cd35be94229b6e1e22ebc2709e31768bcc9
 target26.showInterface=false
-target26.type=ClassTarget
+target26.type=AbstractTarget
 target26.width=120
 target26.x=0
 target26.y=0
@@ -256,7 +291,11 @@ target7.width=120
 target7.x=0
 target7.y=0
 target8.height=70
+<<<<<<< HEAD
 target8.name=A_Boss
+=======
+target8.name=Weapon
+>>>>>>> f8c71cd35be94229b6e1e22ebc2709e31768bcc9
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=120
@@ -270,7 +309,11 @@ target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=1292
 world.lastInstantiated=Game
+=======
+width=1294
+>>>>>>> f8c71cd35be94229b6e1e22ebc2709e31768bcc9
 xPosition=0
-yPosition=1
+yPosition=0
