@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=PowerUp
+comment0.text=\r\n\ The\ PowerUp\ class\ will\ give\ the\ ship\ that\ collected\ it\ an\ upgrade\r\n\ \r\n\ @author\ Nicodemus\ Allan\ \r\n\ @version\ March\ 4,\ 2022\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ applyEffects()
+comment3.params=
+comment3.target=void\ detectTouching()
+numComments=4

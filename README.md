@@ -8,17 +8,17 @@ Currently this project only has essential abstract classes and interfaces.
 - Julia   
   - Vector class, VecActor class, Spawner class
 - Haiden  
-  - Art UI class, Title Screen, Gif class
+  - Art, UI class, Title Screen, Gif class
 - Luca    
   - Asteroid class, Enemy class, Boss class
 - Cole    
   - I_Upgradeable,  Ship class, progression
 - Everett 
-  - Settings class, Player class
+  - Settings class, PowerUp class, Player class
 - Nico 
-  - I_Weapons, Bullet class
+  - Weapon class, Bullet class
 - Mr R 
-  - Asteroid class
+  - I_damageable, Gif class, Wave.class
 
 What is being evaluated?
 

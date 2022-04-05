@@ -16,4 +16,27 @@ public class Asteroid extends A_Asteroid
     {
         // Add your action code here.
     }
+    
+    
+    
+    /**
+     * Method collide has not been created yet. 
+     */
+    public void collide(){
+    
+    
+    }
+    
+    
+    
+    
+    
+    /**
+     * Method split has not been created yet. 
+     */
+    public void split(){
+    
+    
+    }
+    
 }

@@ -7,14 +7,30 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class A_Asteroid extends VecActor
+public abstract class A_Asteroid extends VecActor
 {
+    
+   protected int size;
+   protected int minSize;
+   protected int maxSize;
+    
+    // speed variables 
+   protected double speed; 
+   protected double minSpeed;
+   protected double maxSpeed;
+    
+    
     /**
-     * Act - do whatever the A_Asteroids wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Method collide has not been created yet. 
      */
-    public void act()
-    {
-        // Add your action code here.
-    }
+    public abstract void collide();
+    
+    
+    
+    
+    
+    /**
+     * Method split has not been created yet. 
+     */
+    public abstract void split();
 }
