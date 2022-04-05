@@ -19,9 +19,9 @@ public abstract class A_Asteroid extends VecActor {
     protected double minSpeed = 2;
     protected double maxSpeed = 10;
     
-    protected int damage;
-    protected int Health;
-    protected int detected;
+    protected int damage;//MrR this could be based on size
+    //protected int Health; Asteroids currently dont have health 
+    //protected int detected; MrR ? is this needed?
     
     protected String name;
     
@@ -29,32 +29,19 @@ public abstract class A_Asteroid extends VecActor {
     GreenfootImage img;
     Game game;
     
-    
     /**
      * Method collide has not been created yet. 
      */
     public abstract void collide();
-    
-    
-    
-    
     
     /**
      * Method split has not been created yet. 
      */
     public abstract void split();
     
-    
-    
-    
-    
     /**
      * Method getHealth
      */
     public abstract int getHealth();
-    
-    
-    
-    
     
 }// end
