@@ -8,9 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Game extends A_Game
 {
-    boolean DEBUG = false;
-    GifImage templateGif = new GifImage("explosion.gif");
-    GifImage gifImg;
     TitleScreen title;
     Ship ship;
     private int lives = 3;

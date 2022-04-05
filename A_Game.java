@@ -45,6 +45,8 @@ public abstract class A_Game extends World
     private int Maxspawncooldown = 75;
     
     
+    
+    
     /**
      * Constructor for objects of class AGame.
      * 

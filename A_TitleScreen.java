@@ -13,10 +13,10 @@ public abstract class A_TitleScreen extends World
      * Constructor for objects of class A_TitleScreen.
      * 
      */
-    public A_TitleScreen()
+    public A_TitleScreen(int w, int h)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 600, 1); 
+        super(w, h, 1, false);
     }
     
     public abstract void act();

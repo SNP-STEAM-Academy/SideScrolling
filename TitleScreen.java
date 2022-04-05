@@ -8,21 +8,42 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TitleScreen extends A_TitleScreen
 {
-
+    
+    private GifImage templateGif = new GifImage("TitleScreenboth.gif");//sets new GifIMage
+    GifImage gifImg; 
+    int width;                                                         //w
+    int height;                                                        //h
+    private Game game;
+    //Label titlelabel;
+    
     /**
      * Constructor for objects of class TitleScreen.
      * 
      */
     public TitleScreen()
     {
+        super(800, 600);
+        gifImg = templateGif; //gifImg
+        //game = g;
+        //setImage(gifImg);                 
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         
+        //addObject(new Label("Click Anywhere to Contitue", 25), getWidth()/2, (int)(getHeight()));
         
         
         
         
     }
     
-    public void act(){}
+    public void act()
+    {
+        setImage();
+        if (Greenfoot.mouseClicked(this))
+        {//
+            Greenfoot.setWorld(game);
+        }//
+    
+    }
     
     public void setGame(Game g){}
     
