@@ -1,8 +1,9 @@
 # Compiled class file
 *.class
 
-# Greenfoot ctext files
-*.ctxt
+# Greenfoot project files
+*.greenfoot
+
 # Log file
 *.log
 
