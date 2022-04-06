@@ -27,23 +27,43 @@ public class Weapon extends A_Weapon
         //loop numBullets to spawn multiple Bullets
     }
     
-    protected void setDamage(int damage)
+    public void setDamage(int damage)
     {
         this.damage = damage;
     }
     
-    protected void setSpeed(int speed)
+    public void setSpeed(int speed)
     {
         this.speed = speed;
     }
     
-    protected void setNumBullets(int numBullets)
+    public void setNumBullets(int numBullets)
     {
         this.numBullets = numBullets;
     }
     
-    protected void setSpread(int spread)
+    public void setSpread(int spread)
     {
         this.spread = spread;
+    }
+    
+    public int getDamage()
+    {
+        return damage;
+    }
+    
+    public int getSpeed()
+    {
+        return speed;
+    }
+    
+    public int getNumBullets()
+    {
+        return numBullets;
+    }
+    
+    public int getSpread()
+    {
+        return spread;
     }
 }

@@ -13,8 +13,12 @@ public abstract class A_Weapon extends Actor
     protected int numBullets;
     protected int spread;
     
-    protected abstract void setDamage(int damage);
-    protected abstract void setSpeed(int speed);
-    protected abstract void setNumBullets(int numBullets);
-    protected abstract void setSpread(int spread);
+    public abstract void setDamage(int damage);
+    public abstract void setSpeed(int speed);
+    public abstract void setNumBullets(int numBullets);
+    public abstract void setSpread(int spread);
+    public abstract int getDamage();
+    public abstract int getSpeed();
+    public abstract int getNumBullets();
+    public abstract int getSpread();
 }
