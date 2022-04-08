@@ -8,14 +8,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bullet extends A_Bullet
 {
-    public Bullet()
+    /**
+     * Bullet class constructor
+     */
+    public Bullet(int speed, int damage, int rotation)
     {
-        
+        this.speed = speed;
+        this.damage = damage;
+        setRotation(rotation);
     }
     
+    /**
+     * Act - do whatever the Projectile wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act()
     {
-        
+        move(speed);
+        checkBounds();
     }
     
     protected void causeDamage()
@@ -25,6 +35,14 @@ public class Bullet extends A_Bullet
     
     protected void checkBounds()
     {
-        
+        if (world == null)
+        {
+            world = getWorld();
+        }
+        if (getX() > (world.getWidth() + 50))
+        {
+            world.removeObject(this);
+            return;
+        }
     }
 }

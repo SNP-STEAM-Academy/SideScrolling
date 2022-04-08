@@ -1,19 +1,57 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Healthbar here.
+ * This is the Healthbar class it is making the healthbar and doing anything involved with the healthbar
  * 
- * @author (your name) 
+ * @author Cole Spiers 
  * @version (a version number or a date)
  */
 public class Healthbar extends A_Healthbar
-{
-    /**
-     * Act - do whatever the Healthbar wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+{   
+    public void HealthBar(int h)
+    {
+        health = h;
+        img = getImage();
+        img.scale(health, img.getHeight());
+    }
+    
+    public void HealthBar (Ship s)
+    {
+        owner = s;
+        health = owner.maxhealth;
+        img = getImage();
+        img.scale(health, img.getHeight());
+    }
+    
     public void act()
     {
-        // Add your action code here.
+        //check 2 see if health 2 small
+        if(health < 1)
+        {
+            //signal DEd
+            if(owner != null)
+            {
+                owner.world.removeObject(this);
+                owner.world.removeObject(owner);
+                
+            }
+            return;
+        }
+        else
+        {
+            //no set set img wdith to health
+            img.scale(health,img.getHeight());
+            setLocation(10+health/2, getY());
+        }
+    }
+    
+    public int getHealth()// a health getter method
+    {
+        return health;
+    }
+    
+    public void setHealth(int h)//a health setter method
+    {
+        health = h;
     }
 }

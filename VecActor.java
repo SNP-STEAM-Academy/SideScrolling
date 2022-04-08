@@ -18,15 +18,17 @@ public class VecActor extends A_VecActor
     }
     
     public void move(){//use the mag and direction of the vel to move
-        
+        pos.add(vel);
+        setLocation(pos.getX(), pos.getY());
     }
     
     public void setVel(double vx, double vy){
-        
+        vel.x = vx;
+        vel.y = vy;
     }
     
     public void setVel(Vector v){
-        
+        vel = v;
     }
     
     public Vector getVel(){
@@ -38,18 +40,18 @@ public class VecActor extends A_VecActor
     }
     
     public void setLocation(int x, int y){
-        
+        super.setLocation(x, y);
     }
     
     public void setLocation(double x, double y){
-        
+        setLocation((int)x + 0.5, (int) y + 0.5);
     }
     
     public void setLocation(Vector p){
-        
+        setLocation(p.getX(), p.getY());
     }
     
     public int getRotation(){
-        return 0;
+        return super.getRotation();
     }
 }

@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import greenfoot.GreenfootImage;
 
 /**
- * Write a description of class AGame here.
+ * Discription of A_Game class:
  * 
  * Game has:
  * Player object
@@ -30,14 +30,26 @@ public abstract class A_Game extends World
     protected GreenfootImage[] backgrounds;
     protected int state;
     
+    boolean DEBUG = true;
+    
+    Ship ship;
+    PowerUp powerup;
+    //TitleScreen title;
+    //PauseMenu pause;
+    
+    private int lives = 3;
+    private int Spawncooldown = 10;
+    private int Minspawncooldown = 25;
+    private int Maxspawncooldown = 75;
+    
     /**
      * Constructor for objects of class AGame.
      * 
      */
-    public A_Game()
+    public A_Game(int w, int h)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(w, h, 1, false); 
     }
     
     protected abstract void updateBackground();
