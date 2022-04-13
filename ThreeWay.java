@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Weapon here.
+ * Write a description of class ThreeWay here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Weapon extends A_Weapon
+public class ThreeWay extends A_Weapon
 {
-    public Weapon()
+    public ThreeWay()
     {
-        this.coolDown = 15;
-        this.damage = 15;
+        this.coolDown = 20;
+        this.damage = 10;
     }
     
     /**
@@ -37,9 +37,16 @@ public class Weapon extends A_Weapon
     
     public void fire()
     {
-        Bullet temp = new Bullet(damage);
-        world.addObject(temp, getX(), getY());
-        temp.move(getImage().getWidth()/2);
+        int turn = 0;
+        for(int i = 0; i < 3; i ++)
+        {
+            Bullet temp = new Bullet(damage);
+            temp.turn(turn);
+            world.addObject(temp, getX(), getY());
+            
+            if (i == 1) turn = 15;
+            if (i == 2) turn = -15;
+        }
         
         shotTimer = 0;
     }
