@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import greenfoot.GreenfootImage;
+import java.util.ArrayList;
 
 /**
  * Discription of A_Game class:
@@ -24,7 +25,7 @@ import greenfoot.GreenfootImage;
 public abstract class A_Game extends World
 {
     protected Player player;
-    protected Wave[] waves;
+    protected ArrayList<Wave> waves;//NR allows us to scale based on number of wave files present
     protected UI ui;
     protected Spawner [] spawners;
     protected GreenfootImage[] backgrounds;
@@ -32,15 +33,15 @@ public abstract class A_Game extends World
     
     boolean DEBUG = true;
     
-    Ship ship;
+    Ship ship;//NR prob not needed as the waves can specify the tiems
     PowerUp powerup;
     //TitleScreen title;
     //PauseMenu pause;
     
-    private int lives = 3;
-    private int Spawncooldown = 10;
-    private int Minspawncooldown = 25;
-    private int Maxspawncooldown = 75;
+    private int lives = 3;//NR perhaps replace this with a Player object
+    private int Spawncooldown = 10;//NR prob not needed as the waves can specify the tiems
+    private int Minspawncooldown = 25;//NR prob not needed as the waves can specify the tiems
+    private int Maxspawncooldown = 75;//NR prob not needed as the waves can specify the tiems
     
     /**
      * Constructor for objects of class AGame.
@@ -50,6 +51,7 @@ public abstract class A_Game extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(w, h, 1, false); 
+        
     }
     
     protected abstract void updateBackground();

@@ -37,7 +37,7 @@ public abstract class A_Asteroid extends VecActor {
     /**
      * Method split has not been created yet. 
      */
-    public abstract void split();
+    protected abstract void split(Actor b);//
     
     
 }// end
