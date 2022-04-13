@@ -1,5 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
+import java.io.FileNotFoundException;
+import java.io.File;
+import java.util.Scanner;
+
 /**
  * Write a description of class Game here.
  * 
@@ -57,13 +61,22 @@ public class Game extends A_Game
     protected void createWaves(){
         waves = new ArrayList<Wave>();
         
-        while (true){
+        for (int i = 0; i < 100; i++){
             //try to load a file
             try{
                 
+                File file = new File(System.getProperty("user.dir")+"/waves/wave"+i+".txt");
+                Scanner reader = new Scanner(file);
+                while(reader.hasNextLine()){
+                    
+                    String data = reader.nextLine();
+                    System.out.println(data);
+                }
+                reader.close();
             }
             catch(FileNotFoundException e){
-                
+                System.out.println("we read in "+(i)+"waves.");
+                break;
             }
         }
     }
