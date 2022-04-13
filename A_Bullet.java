@@ -13,7 +13,6 @@ public abstract class A_Bullet extends Actor
     protected int speed;
     protected int damage;
     
-    public abstract void act();
     protected abstract void causeDamage();
     protected abstract void checkBounds();
 }

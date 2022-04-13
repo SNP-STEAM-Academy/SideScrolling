@@ -11,11 +11,10 @@ public class Bullet extends A_Bullet
     /**
      * Bullet class constructor
      */
-    public Bullet(int speed, int damage, int rotation)
+    public Bullet(int damage)
     {
-        this.speed = speed;
         this.damage = damage;
-        setRotation(rotation);
+        this. speed = 25;
     }
     
     /**

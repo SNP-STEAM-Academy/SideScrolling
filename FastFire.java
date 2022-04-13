@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Weapon here.
+ * Write a description of class FastFire here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Weapon extends A_Weapon
+public class FastFire extends A_Weapon
 {
-    public Weapon()
+    public FastFire()
     {
-        this.coolDown = 15;
-        this.damage = 15;
+        this.coolDown = 5;
+        this.damage = 10;
     }
     
     /**
