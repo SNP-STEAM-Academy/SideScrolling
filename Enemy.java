@@ -3,13 +3,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Enemy here.
  * 
- * @author (your name) 
+ * @author Luca Quacquarelli 
  * @version (a version number or a date)
  */
 public class Enemy extends A_Enemy {
     
     
     public Enemy() {
+        
+        img = getImage();
+        //shot = new GreenfootSound("Button_Press.mp3");
+        //healthBar = new HealthBar(this);
+        speed = 5;
+        cooldown = 90;
+        
     
     }
     
@@ -20,14 +27,27 @@ public class Enemy extends A_Enemy {
      */
     public void act()
     {
-        // Add your action code here.
+        
     }
     
     
     public void move(double speed) {
+        
+        // if(Util.distance(mX,mY, getExactX(), getExactY())<speed){
+            
+            // getRandomLocation();
+            
+        // }
+        // else {
+            
+            // turnTowards((int)mX, (int)mY);
+          
+            // super.move(speed);
+            
+    
+        // }
     
     }
-    
     
     void fire() {
 
