@@ -22,7 +22,7 @@ public class Asteroid extends A_Asteroid {
         img.scale(size, size);
         
         //turn to ensure the asteroids come in at different angles 
-        //turn(Util.random(-45,46));
+        turn(Util.random(-45,46));
   
         speed = Util.random(minSpeed, maxSpeed);
         
@@ -63,7 +63,7 @@ public class Asteroid extends A_Asteroid {
             
         }
         
-        //move
+        //move
         //move(speed);
         
         if (getX() > game.getWidth() + 500 || getX() < -500 || getY() > game.getWidth() + 500 || getY() < -500) {
@@ -74,42 +74,9 @@ public class Asteroid extends A_Asteroid {
             
         }
         
-        Actor temp = getOneIntersectingObject(Bullet.class);
         
-        if (temp != null) {
-                
-            int numKids = Util.random(2, 5);
-            int newSize = size/numKids;
-            
-            if (newSize <= minSize) {
-                
-                return;
-                
-            }
-            
-            //for each one
-            for(int i = 0; i < numKids; i++) {
-                
-                Asteroid kid = new Asteroid(newSize);
-                //game.addObject(kid, getX() + Util.random(0, size), getY() + Util.random(0, size));//add it to the world
-                game.addObject(kid, getX(), getY());
-                
-                kid.turnTowards(temp.getX(), temp.getY());
-                
-                kid.turn(180+Util.random(-90, 90));
-                
-                //kid.move(kid.speed);
-                
-            }
-            
-            // //add explosin
-            // game.addObject(new Explosion(temp), temp.getX(), temp.getY());
-            
-            game.removeObject(temp);
-            //remove 
-            game.removeObject(this);   
-            
-        }    
+        
+        
                 
     }// end act()
     
@@ -133,13 +100,50 @@ public class Asteroid extends A_Asteroid {
      * Method split has not been created yet. 
      */
     public void split() {
-    
+
     
     }// end split()
 
     protected void split(Actor a) {
     
-    
+
+        a = getOneIntersectingObject(Bullet.class);
+        
+        if (a != null) {
+                
+            int numKids = Util.random(2, 5);
+            int newSize = size/numKids;
+            
+            if (newSize <= minSize) {
+                
+                return;
+                
+            }
+            
+            //for each one
+            for(int i = 0; i < numKids; i++) {
+                
+                Asteroid kid = new Asteroid(newSize);
+                //game.addObject(kid, getX() + Util.random(0, size), getY() + Util.random(0, size));//add it to the world
+                game.addObject(kid, getX(), getY());
+                
+                kid.turnTowards(a.getX(), a.getY());
+                
+                kid.turn(180+Util.random(-90, 90));
+                
+                //kid.move(kid.speed);
+                
+            }
+            
+            // //add explosin
+            // game.addObject(new Explosion(temp), temp.getX(), temp.getY());
+            
+            game.removeObject(a);
+            //remove 
+            game.removeObject(this);   
+            
+        }    
+        
     }// end split()    
     
     

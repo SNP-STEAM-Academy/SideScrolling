@@ -19,10 +19,7 @@ public abstract class A_Asteroid extends VecActor {
     protected double minSpeed = 2;
     protected double maxSpeed = 10;
     
-    protected int damage;//MrR this could be based on size
-    //protected int Health; Asteroids currently dont have health 
-    //protected int detected; MrR ? is this needed?
-    
+    protected double move = 0;
     protected String name;
     
     // Game and image variables 
@@ -37,7 +34,7 @@ public abstract class A_Asteroid extends VecActor {
     /**
      * Method split has not been created yet. 
      */
-    protected abstract void split(Actor b);//
+    protected abstract void split(Actor b);
     
     
 }// end
