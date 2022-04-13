@@ -1,0 +1,4 @@
+asteroid, 1000, 0
+asteroid, 3000, 0
+asteroid, 5000, 0
+asteroid, 7000, 0

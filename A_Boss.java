@@ -7,14 +7,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class A_Boss extends Enemy
-{
-    /**
-     * Act - do whatever the A_Boss wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act()
-    {
-        // Add your action code here.
-    }
+public abstract class A_Boss extends Enemy {
+    
+    
+    protected int Health;
+    
+     // size  variables
+    protected int size;
+    protected int minSize = 20;
+    protected int maxSize = 150;
+    
+    // speed variables 
+    protected double speed = 0; 
+    protected double minSpeed = 2;
+    protected double maxSpeed = 10;
+    
+    
+    // Game and image variables 
+    GreenfootImage img;
+    Game game;
+    Weapon weapon;
+    
 }

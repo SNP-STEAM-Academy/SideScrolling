@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Luca Quacquarelli) 
  * @date 2022-04-05
  */
-public class Asteroid extends A_Asteroid {
+public class Asteroid_new extends A_Asteroid {
     
     /**
      * Constructor for objects of class Asteroid.
@@ -15,7 +15,7 @@ public class Asteroid extends A_Asteroid {
      * Gets a random direction from the Util class.
      * Gets a random speed from the Util class. 
      */
-    public Asteroid() {
+    public Asteroid_new() {
         
         size = Util.random(5*minSize, maxSize);
         img = getImage();
@@ -36,7 +36,7 @@ public class Asteroid extends A_Asteroid {
      * @param siz 
      * 
      */
-    public Asteroid(int siz) {
+    public Asteroid_new (int siz) {
         
         size = siz;
         
@@ -45,11 +45,7 @@ public class Asteroid extends A_Asteroid {
         speed = Util.random(minSpeed, maxSpeed);
         
     }// end Asteroid()
-    
-    
-    
-    
-    
+
     /**
      * Act - do whatever the Asteroid wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -77,8 +73,25 @@ public class Asteroid extends A_Asteroid {
         Actor temp = getOneIntersectingObject(Bullet.class);
         
         if (temp != null) {
+            split(temp);
+            
+        }    
                 
-            int numKids = Util.random(2, 5);
+    }// end act()
+    
+    /**
+     * Method collide has not been created yet. 
+     */
+    public void collide() {
+    
+    
+    }// end collide()
+    
+    /**
+     * Method split has not been created yet. 
+     */
+    public void split(Actor temp) {
+        int numKids = Util.random(2, 5);
             int newSize = size/numKids;
             
             if (newSize <= minSize) {
@@ -91,15 +104,12 @@ public class Asteroid extends A_Asteroid {
             for(int i = 0; i < numKids; i++) {
                 
                 Asteroid kid = new Asteroid(newSize);
-                //game.addObject(kid, getX() + Util.random(0, size), getY() + Util.random(0, size));//add it to the world
                 game.addObject(kid, getX(), getY());
                 
                 kid.turnTowards(temp.getX(), temp.getY());
                 
-                kid.turn(180+Util.random(-90, 90));
-                
-                //kid.move(kid.speed);
-                
+                kid.turn(Util.random(-90, 90));
+                                
             }
             
             // //add explosin
@@ -109,39 +119,7 @@ public class Asteroid extends A_Asteroid {
             //remove 
             game.removeObject(this);   
             
-        }    
-                
-    }// end act()
-    
-    
-    
-    
-    
-    /**
-     * Method collide has not been created yet. 
-     */
-    public void collide() {
-    
-    
-    }// end collide()
-    
-    
-    
-    
-    
-    /**
-     * Method split has not been created yet. 
-     */
-    public void split() {
-    
     
     }// end split()
 
-    protected void split(Actor a) {
-    
-    
-    }// end split()    
-    
-    
-    
 }
