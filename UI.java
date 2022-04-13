@@ -1,19 +1,33 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class UI here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * 
+ * @author Haiden Murphy
+ * @version 04/07/2022
  */
 public class UI extends A_UI
 {
     /**
-     * Act - do whatever the UI wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     *
      */
+    public void UI(int u)
+    {
+        UIBanner = u;
+        img = getImage();
+        img.scale(UIBanner, img.getHeight());
+    }
+    
+    public void UI(Ship s)
+    {
+        owner = s;
+        //UIBanner = owner.maxUIBanner;
+        img = getImage();
+        img.scale(UIBanner, img.getHeight());
+    }
+    
     public void act()
     {
-        // Add your action code here.
+    
     }
 }
