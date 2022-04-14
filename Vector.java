@@ -56,6 +56,14 @@ public class Vector extends A_Vector
     public double getY(){
         return y;
     }
+
+    public void x(double _x){
+        x = _x;
+    }
+    
+    public void y(double _y){
+        y = _y;
+    }
     
     public  double[] asArray(){
         return super.asArray();

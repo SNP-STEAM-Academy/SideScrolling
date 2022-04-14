@@ -35,6 +35,11 @@ public class Game extends A_Game
 
     public void act(){
         
+        
+        
+        
+        
+        //NR Make sure all action code not related to spawning is above here
         //check to see if any more waves are available
         if (waves.size()==0){
             //no gameover
