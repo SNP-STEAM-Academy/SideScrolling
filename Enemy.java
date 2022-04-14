@@ -69,7 +69,25 @@ public class Enemy extends A_Enemy {
     }
     
     void fire() {
-
+        //Bullet temp = new Bullet(this);
+        
+        
+         // if(!shot.isPlaying()) {
+            
+            // shot.play();
+            
+        // }
+        // else {
+            
+            // shot.stop();
+            // shot.play();
+            
+        // }
+        
+        //world.addObject(temp, getX(), getY());
+        //temp.move(img.getWidth()/2);
+        
+        //shotTimer = 0;
     }
     
     
