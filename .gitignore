@@ -2,7 +2,7 @@
 *.class
 
 # Greenfoot project files
-*.greenfoot
+project.greenfoot
 
 # Log file
 *.log
