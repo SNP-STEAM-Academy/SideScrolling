@@ -7,6 +7,16 @@
 public class Wave extends A_Wave 
 {
 
+    public void act(){
+        
+    }
+    
+    protected String[] readFile(){
+        return null;
+    }
 
-
+    protected ArrayList<Asteroid> createEnemies(){
+        
+    }
+    
 }
