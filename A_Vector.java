@@ -20,6 +20,13 @@ public abstract class A_Vector
     public abstract void add(A_Vector other);
     public abstract void sub(A_Vector other);
     public abstract void scale(double num);
+    public A_Vector(double x, double y){
+        this.x = x;
+        this.y = y;
+        calcAngle();
+        calcMag();
+    }
+    
     
     public abstract void normalize();
     public abstract double calcAngle();
