@@ -28,10 +28,8 @@ public abstract class A_Spawner extends Actor
         // Add your action code here.
     }
     
-    public void Spawn(EnemyType e){
-        if (e == EnemyType.Asteroid){
-           getWorld().addObject(new Asteroid(), getX(), getY()); 
-        }
+    public void spawn(A_Asteroid a){
+           getWorld().addObject(a, getX(), getY()); 
     }
     
 }

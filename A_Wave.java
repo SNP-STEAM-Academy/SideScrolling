@@ -2,6 +2,7 @@ import java.io.FileReader;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.ArrayList;
 
 /**
  * Write a description of class Wave here.
@@ -11,38 +12,52 @@ import java.util.Date;
  */
 public abstract class A_Wave  
 {
-    //NR Unfortunately I have the wave completed at home.
-    protected Date date; 
-    protected String [] waveString;//a string representation that if read in and contained the current wave
-    protected String [] currentSpawn;//a string representation which will be used to spawn in an enemy
-    protected int currentWave;
-    protected long currentTime;//the current amount of millis so far
-    protected long startTime;//the time the wave started
-    protected File fileName; 
-    protected FileReader file;
-    protected Spawner [] spawners;//needs to be set in the contructors
-    protected ArrayList<Asteroid> enemies;
-    protected Game game;//need this in the constructor to make life easier
+    protected long currentTime = 0;
+    protected long startTime = 0;
+    protected ArrayList<A_Asteroid> enemies;
+    protected ArrayList<Long> times;
+    protected ArrayList<Integer> spawners;
+    protected Game game;
     
-    public A_Wave(int num, Spawner[] s){
-        //num is used to set the file name.  
-        //Files should be named something like "wave"+num+".txt"
-        currentWave = num;
-        spawners = s;
-         
-        //read the file
-        fileName = new File("wave"+num+".txt");
-        //create the waves enemies
-        //set the time of when the wave started
-        date = new Date();
-        startTime = date.getTime();
+    public A_Wave(Game g){
+        game = g;
+        
+        enemies = new ArrayList<A_Asteroid>();
+        times = new ArrayList<Long>();
+        spawners = new ArrayList<Integer>();
     }
     
-    public abstract void act();//needs to be called in the Game.act()
+    //call this in the world act method
+    public void act(){
+        //the first time running, get the starting time
+        if (startTime == 0){
+            startTime = System.currentTimeMillis();
+        }
+        currentTime = System.currentTimeMillis() - startTime;
+        if (enemies.size()>0){
+            //NR note these need to be switched to Asteroid when completed
+            Asteroid_new nextEnemy = (Asteroid_new)enemies.get(0);
+            if (times.get(0).longValue()<currentTime){
+                System.out.println("spawners"+spawners.get(0).intValue()%game.spawners.length+", "+game.spawners[spawners.get(0).intValue()%game.spawners.length]);
+                game.spawners[spawners.get(0).intValue()%game.spawners.length].spawn(enemies.get(0));
+                //remove the enemy, time and spawner int.
+                enemies.remove(0);
+                times.remove(0);
+                spawners.remove(0);
+                System.out.println("spawned in an enemy at time "+currentTime);
+            }
+        }
+        else{
+            System.out.println("need a new wave");
+        }
+    }
     
-    protected abstract String [] readFile();
     
-    public abstract ArrayList<Asteroid> createEnemies();
+    //NR a way to get the number of remaining enemies in the wave
+    public int getNumberRemaining(){
+        return enemies.size();
+    }
     
+    protected abstract void addEnemy(String etype, String time, String spawner);
     
 }

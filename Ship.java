@@ -20,6 +20,8 @@ public class Ship extends A_Ship
     
     public void act()
     {
+        super.act();
+        
         if (world == null)
         {
             world = getWorld();

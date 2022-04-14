@@ -27,7 +27,7 @@ public abstract class A_Game extends World
     protected Player player;
     protected ArrayList<Wave> waves;//NR allows us to scale based on number of wave files present
     protected UI ui;
-    protected Spawner [] spawners;
+    public Spawner [] spawners;
     protected GreenfootImage[] backgrounds;
     protected int state;
     

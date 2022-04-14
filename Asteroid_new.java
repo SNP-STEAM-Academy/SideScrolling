@@ -44,6 +44,8 @@ public class Asteroid_new extends A_Asteroid {
         img.scale(size, size);
         speed = Util.random(minSpeed, maxSpeed);
         
+        
+        
     }// end Asteroid()
 
     /**
@@ -56,16 +58,23 @@ public class Asteroid_new extends A_Asteroid {
         if (game == null) {
             
             game = (Game)getWorld();
-            
+            turnTowards(game.getWidth()/2,game.getHeight()/2);
+            //get out position
+            //NR=>JN need to move this to a vector method
+            pos = new Vector((double)getX(),(double)getY());
+            //NR=>JN need to move this to a vector method
+            vel = new Vector(Math.cos(getRotation()/180.*Math.PI),Math.sin(getRotation()/180.*Math.PI));
+            //get our velocity
         }
-        
         //move
-        //move(speed);
+        move();
         
         if (getX() > game.getWidth() + 500 || getX() < -500 || getY() > game.getWidth() + 500 || getY() < -500) {
             
             //yes ==> remove from world
+            System.out.println("Removed at "+getX()+", "+getY());
             game.removeObject(this);
+            
             return;
             
         }
@@ -76,7 +85,8 @@ public class Asteroid_new extends A_Asteroid {
             split(temp);
             
         }    
-                
+            
+        //System.out.println(""+pos.x+", "+pos.y);
     }// end act()
     
     /**
