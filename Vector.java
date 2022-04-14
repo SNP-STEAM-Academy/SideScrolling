@@ -14,6 +14,17 @@ public class Vector extends A_Vector
         super();
     }
     
+    public Vector(int x, int y)
+    {
+        super((double)x, (double)y);
+    }
+    
+    public Vector(int angle, double mag){
+        double theta = (double)angle/180.*Math.PI;
+        x = mag*Math.cos(theta);
+        y = mag*Math.sin(theta);
+    }
+
     public Vector(double _x, double _y)
     {
         super();
@@ -22,6 +33,7 @@ public class Vector extends A_Vector
     }
     //move ==> pos.add(vel)
     public void add(Vector other){
+
         x += other.getX();
         y += other.getY();
     }

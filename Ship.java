@@ -13,7 +13,8 @@ public class Ship extends A_Ship
      */
     public Ship()
     {
-        
+
+        vel = new Vector();
     }
     
     
@@ -25,10 +26,13 @@ public class Ship extends A_Ship
         if (game == null)
         {
             game = (Game)getWorld();
+
+            pos = new Vector(game.getWidth()*0.2,game.getHeight()*0.5);
         }
         
         checkKeys();
         checkBounds();
+        move();
         
         Asteroid temp = (Asteroid)getOneIntersectingObject(Asteroid.class);
         
@@ -47,34 +51,20 @@ public class Ship extends A_Ship
         else if (Greenfoot.isKeyDown("s")){
             down();
         }
-        //nr => Cole do x here
+        else if (Greenfoot.isKeyDown("a"))
+        {
+            left();
+        }
+        else if (Greenfoot.isKeyDown("d")){
+            right();
+        }
         
         vel.normalize();
         vel.scale(speed);
-        
         pos.add(vel);
-        // if (Greenfoot.isKeyDown("a"))
-        // {
-            // turn(-turnSpeed);
-        // }
-        
-        // if (Greenfoot.isKeyDown("s")&& speed > 0)
-        // {
-            // speed -= thrustBack;
-        // }
-        
-        // if (Greenfoot.isKeyDown("d"))
-        // {
-            // turn(+turnSpeed);
-        // }
-        
-        // if (Greenfoot.isKeyDown("space")&& shotTimer > shotcooldown)
-        // {
-            // //shoooting
-        // }
     }
     
-    void checkBounds()
+    protected void checkBounds()
     {
         
     }
@@ -126,15 +116,21 @@ public class Ship extends A_Ship
         return Health;
     }
     
-    protected void up(){
-        vel.y(-speed);
-    }
     
-    protected void forward(){
-        vel.y(-speed);
+    
+    protected void up(){
+        vel.y(+speed);
     }
     
     protected void down(){
-        vel.y(+speed);
+        vel.y(-speed);
+    }
+    
+    protected void left(){
+        vel.x(+speed);
+    }
+    
+    protected void right(){
+        vel.x(-speed);
     }
 }

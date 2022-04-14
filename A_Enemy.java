@@ -27,10 +27,11 @@ public abstract class A_Enemy extends Asteroid {
     /** random y for the Enemy to drive towards **/
     protected double mY;
     
-    World world;
+    Game game;
     GreenfootImage img;
    
-    public abstract void move(double speed);
+    //public abstract void move(double speed);
+    
     abstract void fire();
     public abstract void getRandomLocation();
     

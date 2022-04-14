@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=A_Asteroid
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ A_Asteroids\ here.\r\n\ Asteroids\ just\ move\ in\ one\ direction\ and\ spawn\ in\ smaller\ asteroids\ when\ shot\r\n\ \r\n\ @author\ (Luca\ Quacquarelli)\ \r\n\ @date\ 2022-04-05\r\n
+comment1.params=
+comment1.target=void\ collide()
+comment1.text=\r\n\ Method\ collide\ has\ not\ been\ created\ yet.\ \r\n
+comment2.params=
+comment2.target=void\ split()
+comment2.text=\r\n\ Method\ split\ has\ not\ been\ created\ yet.\ \r\n
+comment3.params=
+comment3.target=int\ getHealth()
+comment3.text=\r\n\ Method\ getHealth\r\n
+numComments=4

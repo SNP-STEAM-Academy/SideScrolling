@@ -31,11 +31,11 @@ public abstract class A_Game extends World
     protected GreenfootImage[] backgrounds;
     protected int state;
     
-    boolean DEBUG = true;
+    boolean DEBUG = false;
     
     Ship ship;//NR prob not needed as the waves can specify the tiems
     PowerUp powerup;
-    //TitleScreen title;
+    TitleScreen title;
     //PauseMenu pause;
     
     private int lives = 3;//NR perhaps replace this with a Player object
