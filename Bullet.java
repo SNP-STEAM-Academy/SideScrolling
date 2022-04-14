@@ -27,7 +27,7 @@ public class Bullet extends A_Bullet
         checkBounds();
     }
     
-    protected void causeDamage()
+    protected void causeDamage(Ship hit)
     {
         
     }
