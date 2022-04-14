@@ -15,7 +15,7 @@ public class Wave extends A_Wave
     protected void addEnemy(String e, String time, String spawner){
         int etype = Integer.parseInt(e);
         if (etype == 0){
-            enemies.add(new Asteroid_new());
+            enemies.add(new Asteroid());
             //enemies.add(new Asteroid());
         }
         else if (etype == 1){

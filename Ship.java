@@ -13,6 +13,7 @@ public class Ship extends A_Ship
      */
     public Ship()
     {
+
         vel = new Vector();
     }
     
@@ -25,6 +26,7 @@ public class Ship extends A_Ship
         if (game == null)
         {
             game = (Game)getWorld();
+
             pos = new Vector(game.getWidth()*0.2,game.getHeight()*0.5);
         }
         

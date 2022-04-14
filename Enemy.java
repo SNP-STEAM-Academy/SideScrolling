@@ -16,6 +16,7 @@ public class Enemy extends A_Enemy {
         //healthBar = new HealthBar(this);
         speed = 4;
         cooldown = 90;
+        vel = new Vector(-speed, 0);
         
     
     }
@@ -27,17 +28,17 @@ public class Enemy extends A_Enemy {
      */
     public void act()
     {
-         if (world == null) {
+         if (game == null) {
             
-            world = getWorld();
-            getRandomLocation();
-            speed = 3;
-            
+            game = (Game)getWorld();
+            //getRandomLocation();
+            //speed = 3;
+            pos = new Vector(getX(), getY());
         }
         
-        moveTimer++;
+        //moveTimer++;
         //checkBounds();
-        move(speed);
+        move();
         
         if (shotTimer > cooldown) {
             
@@ -93,9 +94,9 @@ public class Enemy extends A_Enemy {
     
     public void getRandomLocation() {
      //get a random moveX
-        mX = Util.random(0, world.getWidth());
+        mX = Util.random(0, game.getWidth());
         //get a random moveX
-        mY = Util.random(0, world.getHeight());
+        mY = Util.random(0, game.getHeight());
         moveTimer = 0;
         
     }

@@ -14,7 +14,7 @@ public abstract class A_Wave
 {
     protected long currentTime = 0;
     protected long startTime = 0;
-    protected ArrayList<A_Asteroid> enemies;
+    protected ArrayList<Asteroid> enemies;
     protected ArrayList<Long> times;
     protected ArrayList<Integer> spawners;
     protected Game game;
@@ -22,7 +22,7 @@ public abstract class A_Wave
     public A_Wave(Game g){
         game = g;
         
-        enemies = new ArrayList<A_Asteroid>();
+        enemies = new ArrayList<Asteroid>();
         times = new ArrayList<Long>();
         spawners = new ArrayList<Integer>();
     }
@@ -36,9 +36,9 @@ public abstract class A_Wave
         currentTime = System.currentTimeMillis() - startTime;
         if (enemies.size()>0){
             //NR note these need to be switched to Asteroid when completed
-            Asteroid_new nextEnemy = (Asteroid_new)enemies.get(0);
+            Asteroid nextEnemy = enemies.get(0);
             if (times.get(0).longValue()<currentTime){
-                System.out.println("spawners"+spawners.get(0).intValue()%game.spawners.length+", "+game.spawners[spawners.get(0).intValue()%game.spawners.length]);
+                //System.out.println("spawners"+spawners.get(0).intValue()%game.spawners.length+", "+game.spawners[spawners.get(0).intValue()%game.spawners.length]);
                 game.spawners[spawners.get(0).intValue()%game.spawners.length].spawn(enemies.get(0));
                 //remove the enemy, time and spawner int.
                 enemies.remove(0);
