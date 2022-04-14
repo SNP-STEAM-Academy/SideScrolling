@@ -14,7 +14,8 @@ public class VecActor extends A_VecActor
      */
     public void act()
     {
-        // Add your action code here.
+        super.act();
+        //new code below
     }
     
     public void move(){//use the mag and direction of the vel to move
@@ -44,7 +45,7 @@ public class VecActor extends A_VecActor
     }
     
     public void setLocation(double x, double y){
-        setLocation((int)x + 0.5, (int) y + 0.5);
+        super.setLocation((int)x + 0.5, (int) y + 0.5);
     }
     
     public void setLocation(Vector p){
@@ -54,4 +55,7 @@ public class VecActor extends A_VecActor
     public int getRotation(){
         return super.getRotation();
     }
+    
+
+    
 }

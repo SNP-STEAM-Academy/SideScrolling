@@ -8,19 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class A_Ship extends VecActor implements I_Damageable
 {
-    //double speed = 0; 
-    //int maxSpeed = 10;
-    //double thrust = 0.5;
-    //double thrustBack = 0.25;
-    //int turnSpeed = 4;
+    double speed = 5; 
     
-    int damage;
-    int Health;
+    protected int damage;
+    protected int Health;
     
-    World world;
-    GreenfootImage img;
-    MouseInfo mouse;
+    protected Game game;    
+    protected GreenfootImage img;
+    //MouseInfo mouse;
     
     //Healthbar healthbar;
     int maxhealth = 600;
+    
+    protected abstract void checkKeys();
+    protected abstract void up();
+    protected abstract void down();
+    protected abstract void left();
+    protected abstract void right();
+    
 }

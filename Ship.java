@@ -13,58 +13,58 @@ public class Ship extends A_Ship
      */
     public Ship()
     {
-        
+
+        vel = new Vector();
     }
     
     
     
     public void act()
     {
-        if (world == null)
+        super.act();
+        
+        if (game == null)
         {
-            world = getWorld();
+            game = (Game)getWorld();
+
+            pos = new Vector(game.getWidth()*0.2,game.getHeight()*0.5);
         }
         
         checkKeys();
         checkBounds();
+        move();
         
         Asteroid temp = (Asteroid)getOneIntersectingObject(Asteroid.class);
         
         //mouse info
-        mouse = Greenfoot.getMouseInfo();
+        //mouse = Greenfoot.getMouseInfo();
     }
     
     
     
-    void checkKeys()
+    protected void checkKeys()
     {
-        // if (Greenfoot.isKeyDown("w")&& speed < maxSpeed)
-        // {
-            // speed += thrust;
-        // }
+        if (Greenfoot.isKeyDown("w"))
+        {
+            up();
+        }
+        else if (Greenfoot.isKeyDown("s")){
+            down();
+        }
+        else if (Greenfoot.isKeyDown("a"))
+        {
+            left();
+        }
+        else if (Greenfoot.isKeyDown("d")){
+            right();
+        }
         
-        // if (Greenfoot.isKeyDown("a"))
-        // {
-            // turn(-turnSpeed);
-        // }
-        
-        // if (Greenfoot.isKeyDown("s")&& speed > 0)
-        // {
-            // speed -= thrustBack;
-        // }
-        
-        // if (Greenfoot.isKeyDown("d"))
-        // {
-            // turn(+turnSpeed);
-        // }
-        
-        // if (Greenfoot.isKeyDown("space")&& shotTimer > shotcooldown)
-        // {
-            // //shoooting
-        // }
+        vel.normalize();
+        vel.scale(speed);
+        pos.add(vel);
     }
     
-    void checkBounds()
+    protected void checkBounds()
     {
         
     }
@@ -118,4 +118,19 @@ public class Ship extends A_Ship
     
     
     
+    protected void up(){
+        vel.y(+speed);
+    }
+    
+    protected void down(){
+        vel.y(-speed);
+    }
+    
+    protected void left(){
+        vel.x(+speed);
+    }
+    
+    protected void right(){
+        vel.x(-speed);
+    }
 }

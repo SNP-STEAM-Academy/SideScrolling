@@ -27,7 +27,7 @@ public abstract class A_Game extends World
     protected Player player;
     protected ArrayList<Wave> waves;//NR allows us to scale based on number of wave files present
     protected UI ui;
-    protected Spawner [] spawners;
+    public Spawner [] spawners;
     protected GreenfootImage[] backgrounds;
     protected int state;
     
@@ -35,7 +35,7 @@ public abstract class A_Game extends World
     
     Ship ship;//NR prob not needed as the waves can specify the tiems
     PowerUp powerup;
-    //TitleScreen title;
+    TitleScreen title;
     //PauseMenu pause;
     
     private int lives = 3;//NR perhaps replace this with a Player object

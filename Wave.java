@@ -7,16 +7,25 @@
 public class Wave extends A_Wave 
 {
 
-    public void act(){
-        
+    public Wave(Game g){
+        super(g);
     }
     
-    protected String[] readFile(){
-        return null;
+    //used to add enemies based on strings in text files
+    protected void addEnemy(String e, String time, String spawner){
+        int etype = Integer.parseInt(e);
+        if (etype == 0){
+            enemies.add(new Asteroid());
+            //enemies.add(new Asteroid());
+        }
+        else if (etype == 1){
+            enemies.add(new Enemy());
+        }
+        else if (etype == 2){
+            enemies.add(new Boss());
+        }
+        times.add(new Long(time));
+        spawners.add(new Integer(spawner));
     }
 
-    protected ArrayList<Asteroid> createEnemies(){
-        
-    }
-    
 }

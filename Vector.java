@@ -25,12 +25,20 @@ public class Vector extends A_Vector
         y = mag*Math.sin(theta);
     }
 
-    public void add(A_Vector other){
+    public Vector(double _x, double _y)
+    {
+        super();
+        x = _x;
+        y = _y;
+    }
+    //move ==> pos.add(vel)
+    public void add(Vector other){
+
         x += other.getX();
         y += other.getY();
     }
     
-    public void sub(A_Vector other){
+    public void sub(Vector other){
         x -= other.getX();
         y -= other.getY();
     }
@@ -59,6 +67,14 @@ public class Vector extends A_Vector
     
     public double getY(){
         return y;
+    }
+
+    public void x(double _x){
+        x = _x;
+    }
+    
+    public void y(double _y){
+        y = _y;
     }
     
     public  double[] asArray(){

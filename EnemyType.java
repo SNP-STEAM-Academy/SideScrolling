@@ -8,5 +8,6 @@ public enum EnemyType
 {
     Asteroid,
     Enemy,
-    Boss
+    Boss;
+    
 }

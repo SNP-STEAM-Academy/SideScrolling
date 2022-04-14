@@ -45,7 +45,8 @@ public class TitleScreen extends A_TitleScreen
     
     }
     
-    public void setGame(Game g){}
+    public void setGame(Game g){
+    }
     
     protected void setImage(){}
 }
