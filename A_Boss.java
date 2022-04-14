@@ -10,7 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public abstract class A_Boss extends Enemy {
     
     
-    protected int Health;
+    protected int health;
     
      // size  variables
     protected int size;
@@ -27,5 +27,18 @@ public abstract class A_Boss extends Enemy {
     GreenfootImage img;
     Game game;
     Weapon weapon;
+    
+    
+    public abstract void setHealthbar();//ensures the implementation should have a health bar
+    
+    //damage, heal, reset, setHealth, getHealth
+    public abstract void damage(int amount);
+    
+    public abstract void heal(int amount);
+    
+    public abstract void reset();
+    public abstract void setHealth(int amount);
+    
+    public abstract int getHealth();
     
 }

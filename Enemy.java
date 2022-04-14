@@ -14,7 +14,7 @@ public class Enemy extends A_Enemy {
         img = getImage();
         //shot = new GreenfootSound("Button_Press.mp3");
         //healthBar = new HealthBar(this);
-        speed = 5;
+        speed = 4;
         cooldown = 90;
         
     
@@ -27,35 +27,77 @@ public class Enemy extends A_Enemy {
      */
     public void act()
     {
+         if (world == null) {
+            
+            world = getWorld();
+            getRandomLocation();
+            speed = 3;
+            
+        }
+        
+        moveTimer++;
+        //checkBounds();
+        move(speed);
+        
+        if (shotTimer > cooldown) {
+            
+            fire();
+            
+        }
+        
+        shotTimer++;
         
     }
     
     
     public void move(double speed) {
         
-        // if(Util.distance(mX,mY, getExactX(), getExactY())<speed){
+        if(Util.distance(mX,mY, getX(), getY())<speed){
             
-            // getRandomLocation();
+            getRandomLocation();
             
-        // }
-        // else {
+        }
+        else {
             
-            // turnTowards((int)mX, (int)mY);
+            turnTowards((int)mX, (int)mY);
           
-            // super.move(speed);
+            move();
             
     
-        // }
+        }
     
     }
     
     void fire() {
-
+        //Bullet temp = new Bullet(this);
+        
+        
+         // if(!shot.isPlaying()) {
+            
+            // shot.play();
+            
+        // }
+        // else {
+            
+            // shot.stop();
+            // shot.play();
+            
+        // }
+        
+        //world.addObject(temp, getX(), getY());
+        //temp.move(img.getWidth()/2);
+        
+        //shotTimer = 0;
     }
     
     
     public void getRandomLocation() {
-    
+     //get a random moveX
+        mX = Util.random(0, world.getWidth());
+        //get a random moveX
+        mY = Util.random(0, world.getHeight());
+        moveTimer = 0;
+        
     }
     
 }
