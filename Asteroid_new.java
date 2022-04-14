@@ -98,7 +98,7 @@ public class Asteroid_new extends A_Asteroid {
     }// end collide()
     
     /**
-     * Method split has not been created yet. 
+     * 
      */
     public void split(Actor temp) {
         int numKids = Util.random(2, 5);
