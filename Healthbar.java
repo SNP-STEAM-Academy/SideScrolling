@@ -31,8 +31,8 @@ public class Healthbar extends A_Healthbar
             //signal DEd
             if(owner != null)
             {
-                owner.world.removeObject(this);
-                owner.world.removeObject(owner);
+                owner.game.removeObject(this);
+                owner.game.removeObject(owner);
                 
             }
             return;

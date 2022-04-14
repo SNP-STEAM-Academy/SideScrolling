@@ -22,9 +22,9 @@ public class Ship extends A_Ship
     {
         super.act();
         
-        if (world == null)
+        if (game == null)
         {
-            world = getWorld();
+            game = (Game)getWorld();
         }
         
         checkKeys();
@@ -33,18 +33,26 @@ public class Ship extends A_Ship
         Asteroid temp = (Asteroid)getOneIntersectingObject(Asteroid.class);
         
         //mouse info
-        mouse = Greenfoot.getMouseInfo();
+        //mouse = Greenfoot.getMouseInfo();
     }
     
     
     
-    void checkKeys()
+    protected void checkKeys()
     {
-        // if (Greenfoot.isKeyDown("w")&& speed < maxSpeed)
-        // {
-            // speed += thrust;
-        // }
+        if (Greenfoot.isKeyDown("w"))
+        {
+            up();
+        }
+        else if (Greenfoot.isKeyDown("s")){
+            down();
+        }
+        //nr => Cole do x here
         
+        vel.normalize();
+        vel.scale(speed);
+        
+        pos.add(vel);
         // if (Greenfoot.isKeyDown("a"))
         // {
             // turn(-turnSpeed);
@@ -118,6 +126,15 @@ public class Ship extends A_Ship
         return Health;
     }
     
+    protected void up(){
+        vel.y(-speed);
+    }
     
+    protected void forward(){
+        vel.y(-speed);
+    }
     
+    protected void down(){
+        vel.y(+speed);
+    }
 }

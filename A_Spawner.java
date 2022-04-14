@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public abstract class A_Spawner extends Actor
 {
     //public static int [] probabilities = {3, 14};
-    public static int [] xLocations = {1300, 1300, 1300, 1300};
+    public static int [] xLocations = {1300, 1300,1300, 1300, 1300};
     public static int [] yLocations = {-300, 100, 300, 500, 900};
     //int spawnTimer = 0;NR using time from wave 
     //int spawnCooldown = 200;
