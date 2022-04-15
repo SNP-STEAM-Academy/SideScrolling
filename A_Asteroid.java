@@ -18,6 +18,8 @@ public abstract class A_Asteroid extends VecActor {
     protected double speed = 0; 
     protected double minSpeed = 2;
     protected double maxSpeed = 10;
+    protected int xSpeed = 0; 
+    protected int ySpeed = -1;
     
     protected double move = 0;
     protected String name;

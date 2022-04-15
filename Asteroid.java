@@ -82,12 +82,12 @@ public class Asteroid extends A_Asteroid {
         }
         
 
-        setLocation(getX()+minSpeed , getY()+maxSpeed); // move
+        setLocation(getX()+xSpeed , getY()+ySpeed); // move
         turn(5); // spin
         if (getY() < getRotation() || getY() > getRotation()) // check limits
         {
-            minSpeed  = -minSpeed ;
-            maxSpeed = -maxSpeed; 
+            xSpeed   = -xSpeed;
+            ySpeed = -ySpeed; 
             getImage().mirrorHorizontally(); // mirror image
         }
         
