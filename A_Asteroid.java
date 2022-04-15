@@ -25,7 +25,6 @@ public abstract class A_Asteroid extends VecActor {
     //protected int xSpeed = 0; //NR=> LQ TVecActor should handle this now
     //protected int ySpeed = -1;
     
-    //protected double move = 0;//not sure what this is for
     protected String name;
     
     // Game and image variables 
