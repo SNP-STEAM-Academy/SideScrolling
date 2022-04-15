@@ -31,17 +31,17 @@ public abstract class A_Game extends World
     protected GreenfootImage[] backgrounds;
     protected int state;
     
-    boolean DEBUG = false;
+    public static boolean DEBUG = false;
     
-    Ship ship;//NR prob not needed as the waves can specify the tiems
-    PowerUp powerup;
-    TitleScreen title;
+    protected Ship ship;//NR prob not needed as the waves can specify the tiems
+    protected PowerUp powerup;
+    protected TitleScreen title;
     //PauseMenu pause;
     
-    private int lives = 3;//NR perhaps replace this with a Player object
-    private int Spawncooldown = 10;//NR prob not needed as the waves can specify the tiems
-    private int Minspawncooldown = 25;//NR prob not needed as the waves can specify the tiems
-    private int Maxspawncooldown = 75;//NR prob not needed as the waves can specify the tiems
+    protected int lives = 3;//NR perhaps replace this with a Player object
+    protected int Spawncooldown = 10;//NR prob not needed as the waves can specify the tiems
+    protected int Minspawncooldown = 25;//NR prob not needed as the waves can specify the tiems
+    protected int Maxspawncooldown = 75;//NR prob not needed as the waves can specify the tiems
     
     /**
      * Constructor for objects of class AGame.

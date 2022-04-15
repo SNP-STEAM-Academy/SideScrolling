@@ -48,6 +48,9 @@ public class Vector extends A_Vector
     }
     
     public void normalize(){
+        //NR=>JN I think we need to make sure we have calculated the latest
+        //magnitude first
+        calcMag();
         x = x/mag;
         y = y/mag;
     }

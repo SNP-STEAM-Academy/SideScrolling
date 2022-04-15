@@ -29,15 +29,17 @@ public class Game extends A_Game
         addObject(ship, getWidth()/4, getHeight()/2);//moved towards the left for start
         createWaves();
         addSpawners();
-        
+        /*Util.say("Is this running");
         if (DEBUG == false)
         {
             title = new TitleScreen();
+            Util.say("sending game to title");
             title.setGame(this);
+            
             Greenfoot.setWorld(title);
-        }
+        }*/
     }
-
+   
     public void act(){
         
         

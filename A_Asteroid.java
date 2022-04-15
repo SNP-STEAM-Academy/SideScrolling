@@ -18,10 +18,14 @@ public abstract class A_Asteroid extends VecActor {
     protected double speed = 0; 
     protected double minSpeed = 2;
     protected double maxSpeed = 10;
-    protected int xSpeed = 0; 
-    protected int ySpeed = -1;
+    //NR=>LQ note that rotation and turn uses ints 
+    protected int rotSpeed = 0; 
+    protected int minRotation = -5;
+    protected int maxRotation = 5;
+    //protected int xSpeed = 0; //NR=> LQ TVecActor should handle this now
+    //protected int ySpeed = -1;
     
-    protected double move = 0;
+    //protected double move = 0;//not sure what this is for
     protected String name;
     
     // Game and image variables 

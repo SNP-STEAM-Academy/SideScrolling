@@ -16,16 +16,9 @@ public class Asteroid extends A_Asteroid {
      * Gets a random speed from the Util class. 
      */
     public Asteroid() {
-         
         size = Util.random(5*minSize, maxSize);
-        img = getImage();
-        img.scale(size, size);
         
-        //turn to ensure the asteroids come in at different angles 
-        //turn(Util.random(-45,46));
-  
-        speed = Util.random(minSpeed, maxSpeed);
-        
+        setParameters();
     }// end Asteroid()
     
     /**
@@ -37,18 +30,10 @@ public class Asteroid extends A_Asteroid {
      * 
      */
     public Asteroid(int siz) {
-        
         size = siz;
+        setParameters();
         
-        img = getImage();
-        img.scale(size, size);
-        speed = Util.random(minSpeed, maxSpeed);
-        
-    }// end Asteroid()
-    
-    
-    
-    
+    }// end Asteroid()   
     
     /**
      * Act - do whatever the Asteroid wants to do. This method is called whenever
@@ -69,28 +54,30 @@ public class Asteroid extends A_Asteroid {
             //get our velocity
         }
         //move
-        move();
+        move(); //NRthis does all the movement
+        turn(rotSpeed); // spin  NR=>moved here to keep it with other updating of variables
         
-        if (getX() > game.getWidth() + 500 || getX() < -500 || getY() > game.getWidth() + 500 || getY() < -500) {
+        if (getX() > game.getWidth() + 300 || getX() < -300 || getY() > game.getHeight() + 300 || getY() < -300) {
             
             //yes ==> remove from world
-            System.out.println("Removed at "+getX()+", "+getY());
+            Util.say("Removed at "+getX()+", "+getY());
             game.removeObject(this);
             
             return;
             
         }
         
-
-        setLocation(getX()+xSpeed , getY()+ySpeed); // move
-        turn(5); // spin
+        /*
         if (getY() < getRotation() || getY() > getRotation()) // check limits
         {
             xSpeed   = -xSpeed;
             ySpeed = -ySpeed; 
-            getImage().mirrorHorizontally(); // mirror image
+            //getImage().mirrorHorizontally(); // mirror image
         }
-        
+        */
+       
+       //NR=>LQ, NA this should probably lie with the bullet class
+       //since the split method is already public
         Actor temp = getOneIntersectingObject(Bullet.class);
         
         if (temp != null) {
@@ -101,6 +88,16 @@ public class Asteroid extends A_Asteroid {
     }// end act()
     
     
+    //NR used to set the parameters of the asteroid in the constructors in one spot 
+    private void setParameters(){
+        
+        img = getImage();
+        img.scale(size, size);
+  
+        speed = Util.random(minSpeed, maxSpeed);
+        rotSpeed = Util.random(minRotation, maxRotation);
+        
+    }
     
     
     
