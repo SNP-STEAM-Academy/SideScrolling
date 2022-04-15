@@ -12,8 +12,8 @@ public class Enemy extends A_Enemy {
     public Enemy() {
         
         img = getImage();
-        //shot = new GreenfootSound("Button_Press.mp3");
-        //healthBar = new HealthBar(this);
+        shot = new GreenfootSound("");
+        healthBar = new Healthbar();
         speed = 4;
         cooldown = 90;
         vel = new Vector(-speed, 0);
@@ -31,12 +31,11 @@ public class Enemy extends A_Enemy {
          if (game == null) {
             
             game = (Game)getWorld();
-            //getRandomLocation();
-            //speed = 3;
+        
             pos = new Vector(getX(), getY());
         }
         
-        //moveTimer++;
+        moveTimer++;
         //checkBounds();
         move();
         
@@ -70,25 +69,25 @@ public class Enemy extends A_Enemy {
     }
     
     void fire() {
-        //Bullet temp = new Bullet(this);
+        Bullet temp = new Bullet(0);
         
         
-         // if(!shot.isPlaying()) {
+         if(!shot.isPlaying()) {
             
-            // shot.play();
+            shot.play();
             
-        // }
-        // else {
+         }
+         else {
             
-            // shot.stop();
-            // shot.play();
+            shot.stop();
+            shot.play();
             
-        // }
+        }
         
-        //world.addObject(temp, getX(), getY());
-        //temp.move(img.getWidth()/2);
+        game.addObject(temp, getX(), getY());
+        temp.move(img.getWidth()/2);
         
-        //shotTimer = 0;
+        shotTimer = 0;
     }
     
     

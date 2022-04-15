@@ -19,7 +19,6 @@ public abstract class A_Enemy extends Asteroid {
     protected int move;
     protected int cooldown;
     protected int shotTimer = 0;
-    //protected int Health;
     
     /** random x for the Enemy to drive towards **/
     protected double mX;
@@ -28,7 +27,9 @@ public abstract class A_Enemy extends Asteroid {
     protected double mY;
     
     Game game;
+    Healthbar healthBar;
     GreenfootImage img;
+    GreenfootSound shot;
    
     //public abstract void move(double speed);
     
