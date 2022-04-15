@@ -81,6 +81,16 @@ public class Asteroid extends A_Asteroid {
             
         }
         
+
+        setLocation(getX()+minSpeed , getY()+maxSpeed); // move
+        turn(5); // spin
+        if (getY() < getRotation() || getY() > getRotation()) // check limits
+        {
+            minSpeed  = -minSpeed ;
+            maxSpeed = -maxSpeed; 
+            getImage().mirrorHorizontally(); // mirror image
+        }
+        
         Actor temp = getOneIntersectingObject(Bullet.class);
         
         if (temp != null) {
