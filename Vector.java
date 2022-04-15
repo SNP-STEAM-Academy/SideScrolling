@@ -12,6 +12,7 @@ public class Vector extends A_Vector
     public Vector()
     {
         super();
+        
     }
     
     public Vector(int x, int y)
@@ -20,48 +21,76 @@ public class Vector extends A_Vector
     }
     
     public Vector(int angle, double mag){
-        double theta = (double)angle/180.*Math.PI;
+        this.mag = mag;
+        this.angle = angle;
+        theta = (double)angle/180.*Math.PI;
         x = mag*Math.cos(theta);
         y = mag*Math.sin(theta);
     }
 
     public Vector(double _x, double _y)
     {
-        super();
+        
         x = _x;
         y = _y;
+        calcAngle();
+        calcMag();
     }
     //move ==> pos.add(vel)
     public void add(Vector other){
 
         x += other.getX();
         y += other.getY();
+        calcMag();
+        calcAngle();
     }
     
     public void sub(Vector other){
         x -= other.getX();
         y -= other.getY();
+        calcMag();
+        calcAngle();
     }
     
     public void scale(double num){
         mag *= num;
+        //NR need to use this to update the x, y components
+        x = mag*Math.cos(theta);
+        y = mag*Math.sin(theta);
     }
     
     public void normalize(){
         //NR=>JN I think we need to make sure we have calculated the latest
         //magnitude first
+        if (x == 0 && y == 0){
+            return;
+        }
+        
         calcMag();
+        
+        Util.say("Normalized"+x+", "+y);
         x = x/mag;
         y = y/mag;
+        Util.say("Normalized"+x+", "+y);
     }
     
     public double calcAngle(){
-        angle = Math.atan(y/x);
+        //NR we should be doing this by quadrant
+        theta = Math.atan2(y,x);//this should be in radians
+        angle = theta/Math.PI*180.;
         return angle;
     }
     
     public double calcMag(){
-        return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+        mag = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+        if (mag == 0){
+            mag = 1;
+        }
+        return mag;
+    }
+    
+    public double getMag(){
+        return mag;
     }
     
     public double getX(){

@@ -53,7 +53,7 @@ public class Ship extends A_Ship
         else if (Greenfoot.isKeyDown("s")){
             down();
         }
-        else if (Greenfoot.isKeyDown("a"))
+        if (Greenfoot.isKeyDown("a"))
         {
             left();
         }
@@ -61,9 +61,14 @@ public class Ship extends A_Ship
             right();
         }
         
-        //vel.normalize();
-        //vel.scale(speed);
-        pos.add(vel);
+        //if (vel.calcMag()>1){
+            vel.normalize();
+            
+        //}
+        vel.scale(speed);
+        
+        //Util.say("vel:"+vel.getX()+", "+vel.getY());
+        //pos.add(vel);
     }
     
     protected void checkBounds()
@@ -121,18 +126,18 @@ public class Ship extends A_Ship
     
     //NR=>CS I think I will change the way we implement this.
     protected void up(){
-        vel.add(new Vector(0,-speed));
+        vel.add(new Vector(0,-1));
     }
     
     protected void down(){
-        vel.add(new Vector(0,speed));
+        vel.add(new Vector(0,1));
     }
     
     protected void left(){
-        vel.add(new Vector(-speed, 0));
+        vel.add(new Vector(-1, 0));
     }
     
     protected void right(){
-        vel.add(new Vector(speed, 0));
+        vel.add(new Vector(1, 0));
     }
 }

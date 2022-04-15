@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Spawner extends A_Spawner
 {
     
-    EnemyType enemy = EnemyType.Asteroid;
+    //EnemyType enemy = EnemyType.Asteroid;
     /**
      * Act - do whatever the Spawner wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Asteroid extends A_Asteroid {
     
+    private int SPREAD = 10;
     /**
      * Constructor for objects of class Asteroid.
      * 
@@ -46,6 +47,7 @@ public class Asteroid extends A_Asteroid {
             
             game = (Game)getWorld();
             turnTowards(game.getWidth()/2,game.getHeight()/2);
+            turn(Util.random(-SPREAD, SPREAD));
             //get out position
             //NR=>JN need to move this to a vector method
             pos = new Vector((double)getX(),(double)getY());
@@ -78,13 +80,13 @@ public class Asteroid extends A_Asteroid {
        
        //NR=>LQ, NA this should probably lie with the bullet class
        //since the split method is already public
-        Actor temp = getOneIntersectingObject(Bullet.class);
+       /* Actor temp = getOneIntersectingObject(Bullet.class);
         
         if (temp != null) {
             split(temp);
             
         }    
-                
+        */        
     }// end act()
     
     
