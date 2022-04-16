@@ -29,6 +29,7 @@ public class Game extends A_Game
         addObject(ship, getWidth()/4, getHeight()/2);//moved towards the left for start
         createWaves();
         addSpawners();
+<<<<<<< Updated upstream
         /*Util.say("Is this running");
         if (DEBUG == false)
         {
@@ -38,6 +39,15 @@ public class Game extends A_Game
             
             Greenfoot.setWorld(title);
         }*/
+=======
+        
+        if (DEBUG == false)
+        {
+            title = new TitleScreen();
+            title.setGame(this);
+            Greenfoot.setWorld(title);
+        }
+>>>>>>> Stashed changes
     }
    
     public void act(){

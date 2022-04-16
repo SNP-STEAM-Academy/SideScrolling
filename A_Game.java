@@ -31,7 +31,11 @@ public abstract class A_Game extends World
     protected GreenfootImage[] backgrounds;
     protected int state;
     
+<<<<<<< Updated upstream
     public static boolean DEBUG = false;
+=======
+    boolean DEBUG = false;
+>>>>>>> Stashed changes
     
     protected Ship ship;//NR prob not needed as the waves can specify the tiems
     protected PowerUp powerup;

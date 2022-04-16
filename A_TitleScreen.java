@@ -10,7 +10,6 @@ public abstract class A_TitleScreen extends World
 {
     Game game;
     
-    
     /**
      * Constructor for objects of class A_TitleScreen.
      * 
