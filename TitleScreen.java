@@ -37,7 +37,7 @@ public class TitleScreen extends A_TitleScreen
         //game = g;
         //(gifImg);                 
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        GreenfootImage img = new GreenfootImage(500,500);
+        //GreenfootImage img = new GreenfootImage(500,500);
         //(new Label("Click Anywhere to Contitue", 25), getWidth()/2, (int)(getHeight() * 0.7));
     }
     
