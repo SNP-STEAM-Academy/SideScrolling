@@ -14,7 +14,7 @@ public class TitleScreen extends A_TitleScreen
     //int height;
     //protected Game game; //NR=>HM moved to abstract class
     GreenfootSound myMusic = new GreenfootSound("Title.mp3");//NR=>HM just commenting this until you have music to use
-    
+    private double volume = 0;
     
     /**
      * Constructor for objects of class TitleScreen.
@@ -47,6 +47,11 @@ public class TitleScreen extends A_TitleScreen
         setImage();
         if (!myMusic.isPlaying()){
             myMusic.playLoop();
+        }
+        
+        if (volume<50){
+            myMusic.setVolume((int)(volume+= 0.2));
+            
         }
         //myMusic.play();//NR=>HM just commenting this until you have music to use
         if (Greenfoot.mouseClicked(this))
