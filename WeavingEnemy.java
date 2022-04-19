@@ -14,6 +14,7 @@ public class WeavingEnemy extends Enemy
      */
     public void act()
     {
-        vel.rotate(2*Math.sin(getY()/500+50));
+        super.act();
+        vel.rotate(2*Math.sin(pos.getY()/500+50));
     }
 }

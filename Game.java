@@ -24,7 +24,7 @@ public class Game extends A_Game
     {
         
         // Create a new world size with a cell size of 1x1 pixels.
-        super(1000, 600, 1, false);//NR standard size as recommented by NA
+        super(1400, 600, 1, false);//NR standard size as recommented by NA
 
         ship = new Ship();//NR the player will eventually contain the ship object
         //add the ship to the world at its midpoint
@@ -32,7 +32,7 @@ public class Game extends A_Game
         createWaves();
         addSpawners();
 
-        if (DEBUG == false)
+        if (DEBUG == true)
         {
             title = new TitleScreen(this);
             Util.say("sending game to title");
@@ -40,6 +40,8 @@ public class Game extends A_Game
             
             Greenfoot.setWorld(title);
         }
+        
+        setActOrder​(Bullet.class, Ship.class, Asteroid.class);
 
     }
    

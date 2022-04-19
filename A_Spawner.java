@@ -17,19 +17,9 @@ public abstract class A_Spawner extends Actor
     //int maxCooldown = 1600;
     protected EnemyType enemyType;
     int spread = 15; //NR still have some RNG although we could specify the velocity vector as well
-
     
-    /**
-     * Act - do whatever the Spawners wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act()
-    {
-        // Add your action code here.
-    }
-    
-    public void spawn(A_Asteroid a){
-           getWorld().addObject(a, getX(), getY()); 
+    public void spawn(Asteroid a){
+        getWorld().addObject(a, getX(), getY()); 
     }
     
 }
