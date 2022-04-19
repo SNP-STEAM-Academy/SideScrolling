@@ -12,12 +12,11 @@ public class Enemy extends A_Enemy {
     public Enemy() {
         
         img = getImage();
-        shot = new GreenfootSound("");
+        //shot = new GreenfootSound("");NR=> use the games soundpool of enemyShot
         //healthBar = new Healthbar(); NR=> enemies are one shot kills and do not need a healthbar
         speed = 4;
         cooldown = 90;
         vel = new Vector(-speed, 0);
-        
     
     }
     
@@ -71,7 +70,7 @@ public class Enemy extends A_Enemy {
     void fire() {
         Bullet temp = new Bullet(0);
         
-        
+        /*
          if(!shot.isPlaying()) {
             
             shot.play();
@@ -82,7 +81,8 @@ public class Enemy extends A_Enemy {
             shot.stop();
             shot.play();
             
-        }
+        }*/
+        game.enemyShot.play();
         
         game.addObject(temp, getX(), getY());
         temp.move(img.getWidth()/2);

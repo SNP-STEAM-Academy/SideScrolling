@@ -10,9 +10,11 @@ import java.util.Scanner;
  */
 public class Game extends A_Game
 {
-
+    
     TitleScreen title;
     //Ship ship;//NR removed this as we inherited one
+    //sound pools
+    public static SoundPool enemyShot = new SoundPool("Zoop.wav");
     
     /**
      * Constructor for objects of class Game.
@@ -42,10 +44,6 @@ public class Game extends A_Game
     }
    
     public void act(){
-        
-        
-        
-        
         
         //NR Make sure all action code not related to spawning is above here
         //check to see if any more waves are available

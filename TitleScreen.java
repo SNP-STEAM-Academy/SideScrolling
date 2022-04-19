@@ -69,11 +69,7 @@ public class TitleScreen extends A_TitleScreen
     }
     */
     
-    public void setGame(Game g)
-    {
-        this.game = g;
-    }
-    
+   
     protected void setImage()
     {
         GreenfootImage temp = gifImg.getCurrentImage();
