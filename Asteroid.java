@@ -120,11 +120,46 @@ public class Asteroid extends A_Asteroid {
         }
     }
 
-    public void damage(int d){
+    public void damage(int d) {
+        
+        split();
         
     }
     
 
+    
+    /**
+     * Method split has not been created yet. 
+     */
+    public void split() {
+         int numKids = Util.random(2, 5);
+            int newSize = size/numKids;
+            
+            if (newSize <= minSize) {
+                
+                return;
+                
+            }
+            
+            //for each one
+            for(int i = 0; i < numKids; i++) {
+                
+                Asteroid kid = new Asteroid(newSize);
+                game.addObject(kid, getX(), getY());
+                
+                kid.turn(Util.random(-90, 90));
+                                
+            }
+            
+            // //add explosin
+            // game.addObject(new Explosion(temp), temp.getX(), temp.getY());
+          
+            game.removeObject(this);   
+            
+            
+    
+    }// end split()
+    
     /**
      * Method split has not been created yet. 
      */
