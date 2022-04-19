@@ -54,7 +54,7 @@ public class Bullet extends A_Bullet
         world.removeObject(this);
     }
     
-    protected void causeDamage()
+    protected void causeDamage(Ship hit)
     {
         //t.takeDamage(damage);//NR=>LQ the Asteroid need a takeDamage function, it should at teh very least remove the Asteroid
         

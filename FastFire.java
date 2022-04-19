@@ -12,6 +12,12 @@ public class FastFire extends A_Weapon
     {
         this.coolDown = 5;
         this.damage = 10;
+        
+        bullets = new Bullet[100];
+        for (int i = 0; i < bullets.length; i++)
+        {
+            bullets[i] = new Bullet(damage);
+        }
     }
     
     /**
