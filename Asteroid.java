@@ -120,6 +120,10 @@ public class Asteroid extends A_Asteroid {
         }
     }
 
+    public void damage(int d){
+        
+    }
+    
 
     /**
      * Method split has not been created yet. 

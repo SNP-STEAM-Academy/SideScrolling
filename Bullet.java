@@ -49,7 +49,8 @@ public class Bullet extends A_Bullet
     
     protected void causeDamage(Asteroid t)
     {
-        //t.takeDamage(damage);//NR=>LQ the Asteroid need a takeDamage function, it should at teh very least remove the Asteroid
+        t.damage(damage);//NR=>LQ the Asteroid need a takeDamage function, it should at teh very least remove the Asteroid
+        //add pick up construcror 
         world.removeObject(this);
     }
     
