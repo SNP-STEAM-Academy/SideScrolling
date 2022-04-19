@@ -39,6 +39,6 @@ public class EnemyBullet extends Bullet
         }
         move(speed);
         checkBounds();
-        
+        checkHit(Ship.class);
     }
 }

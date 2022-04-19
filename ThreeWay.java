@@ -18,11 +18,11 @@ public class ThreeWay extends A_Weapon
      * Act - do whatever the Weapons wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
+    public void main()
     {
-        if (world == null)
+        if (game == null)
         {
-            world = getWorld();
+            game = (Game)getWorld();
         }
         //Checks to see if space bar was pressed
         if (Greenfoot.isKeyDown("space") && shotTimer >= coolDown)
@@ -42,7 +42,7 @@ public class ThreeWay extends A_Weapon
         {
             Bullet temp = new Bullet(damage);
             temp.turn(turn);
-            world.addObject(temp, getX(), getY());
+            game.addObject(temp, getX(), getY());
             
             if (i == 1) turn = 15;
             if (i == 2) turn = -15;

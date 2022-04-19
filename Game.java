@@ -32,7 +32,7 @@ public class Game extends A_Game
         createWaves();
         addSpawners();
 
-        if (DEBUG == true)
+        if (DEBUG == false)
         {
             title = new TitleScreen(this);
             Util.say("sending game to title");
@@ -41,7 +41,7 @@ public class Game extends A_Game
             Greenfoot.setWorld(title);
         }
         
-        setActOrder​(Bullet.class, Ship.class, Asteroid.class);
+        setActOrder(Bullet.class, Ship.class, Asteroid.class);
 
     }
    
