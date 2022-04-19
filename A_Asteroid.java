@@ -17,14 +17,19 @@ public abstract class A_Asteroid extends VecActor {
     // speed variables 
     protected double speed = 0; 
     protected double minSpeed = 2;
-    protected double maxSpeed = 10;
+    protected double maxSpeed = 14;
+    //NR=>LQ note that rotation and turn uses ints 
+    protected int rotSpeed = 0; 
+    protected int minRotation = -5;
+    protected int maxRotation = 5;
+    //protected int xSpeed = 0; //NR=> LQ TVecActor should handle this now
+    //protected int ySpeed = -1;
     
-    protected double move = 0;
     protected String name;
     
     // Game and image variables 
-    GreenfootImage img;
-    Game game;
+    protected GreenfootImage img;
+    protected Game game;
     
     /**
      * Method collide has not been created yet. 

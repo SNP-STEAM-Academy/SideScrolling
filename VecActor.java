@@ -51,11 +51,5 @@ public class VecActor extends A_VecActor
     public void setLocation(Vector p){
         setLocation(p.getX(), p.getY());
     }
-    
-    public int getRotation(){
-        return super.getRotation();
-    }
-    
-
-    
+        
 }

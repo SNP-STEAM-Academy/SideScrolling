@@ -51,4 +51,11 @@ public class Util
         return Math.sqrt(dx*dx+dy*dy);//pyth is sqrt(x^2 + y^2)
     }
     
+    public static void say(String msg){
+        //if (Game.DEBUG == true){
+            System.out.println(msg);
+        //}
+    }
+    
+    
 }

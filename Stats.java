@@ -21,7 +21,7 @@ public class Stats
     protected double amountBullets;
     protected double shipType;
     //protected double pilot;
-    protected double 
+    //protected double 
     //protected double ;
     
     public Stats(int mH, int ohT, int dT, int bT, int pT, int iT, double mS, double mTS)
@@ -32,7 +32,7 @@ public class Stats
         //poisonTime = pT;
         decayTimer = dT;
         invincibleTimer = iT;
-        Speed = S;
+        //Speed = S;
         turnSpeed = mTS;
         
         

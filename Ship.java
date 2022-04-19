@@ -27,7 +27,7 @@ public class Ship extends A_Ship
         {
             game = (Game)getWorld();
 
-            pos = new Vector(game.getWidth()*0.2,game.getHeight()*0.5);
+            pos = new Vector((double)game.getWidth()*0.2,(double)game.getHeight()*0.5);
         }
         
         checkKeys();
@@ -44,6 +44,8 @@ public class Ship extends A_Ship
     
     protected void checkKeys()
     {
+        //get a new velocity vector
+        vel = new Vector();
         if (Greenfoot.isKeyDown("w"))
         {
             up();
@@ -51,7 +53,7 @@ public class Ship extends A_Ship
         else if (Greenfoot.isKeyDown("s")){
             down();
         }
-        else if (Greenfoot.isKeyDown("a"))
+        if (Greenfoot.isKeyDown("a"))
         {
             left();
         }
@@ -59,9 +61,14 @@ public class Ship extends A_Ship
             right();
         }
         
-        vel.normalize();
+        //if (vel.calcMag()>1){
+            vel.normalize();
+            
+        //}
         vel.scale(speed);
-        pos.add(vel);
+        
+        //Util.say("vel:"+vel.getX()+", "+vel.getY());
+        //pos.add(vel);
     }
     
     protected void checkBounds()
@@ -117,20 +124,20 @@ public class Ship extends A_Ship
     }
     
     
-    
+    //NR=>CS I think I will change the way we implement this.
     protected void up(){
-        vel.y(+speed);
+        vel.add(new Vector(0,-1));
     }
     
     protected void down(){
-        vel.y(-speed);
+        vel.add(new Vector(0,1));
     }
     
     protected void left(){
-        vel.x(+speed);
+        vel.add(new Vector(-1, 0));
     }
     
     protected void right(){
-        vel.x(-speed);
+        vel.add(new Vector(1, 0));
     }
 }

@@ -1,12 +1,12 @@
 # SideScrolling
 A Greenfoot Java-based implementation of a side-scrolling shoot-em-up game.
 
-Currently this project only has essential abstract classes and interfaces.
+Working are waves, asteroids.
 
 **Roles**
 
 - Julia   
-  - Vector class, VecActor class, Spawner class
+  - Vector class, VecActor class, Pickup class
 - Haiden  
   - Art, UI class, Title Screen, Gif class
 - Luca    
@@ -14,11 +14,11 @@ Currently this project only has essential abstract classes and interfaces.
 - Cole    
   - I_Upgradeable,  Ship class, progression
 - Everett 
-  - Settings class, PowerUp class, Player class
+  - Stats class, Player class
 - Nico 
   - Weapon class, Bullet class
 - Mr R 
-  - I_damageable, Gif class, Wave.class
+  - I_damageable, Wave.class, Spawners
 
 What is being evaluated?
 
