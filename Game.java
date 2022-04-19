@@ -24,7 +24,7 @@ public class Game extends A_Game
     {
         
         // Create a new world size with a cell size of 1x1 pixels.
-        super(1400, 600, 1, false);//NR standard size as recommented by NA
+        super(1000, 600, 1, false);//NR standard size as recommented by NA
 
         ship = new Ship();//NR the player will eventually contain the ship object
         //add the ship to the world at its midpoint
