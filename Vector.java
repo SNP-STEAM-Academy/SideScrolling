@@ -74,6 +74,15 @@ public class Vector extends A_Vector
         Util.say("Normalized"+x+", "+y);
     }
     
+    public void rotate(double a){
+        angle += a;
+        theta = angle*Math.PI/180.;
+        calcMag();
+        x = mag*Math.cos(theta);
+        y = mag*Math.sin(theta);
+        
+    }
+    
     public double calcAngle(){
         //NR we should be doing this by quadrant
         theta = Math.atan2(y,x);//this should be in radians

@@ -9,15 +9,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Enemy extends A_Enemy {
     
     
+    
     public Enemy() {
         
-        img = getImage();
-        shot = new GreenfootSound("");
-        healthBar = new Healthbar();
+        img = getImage();//NR=>LQ fixed image
+        img.mirrorHorizontally();
+        setImage(img);
+        //shot = new GreenfootSound("");NR=> use the games soundpool of enemyShot
+        //healthBar = new Healthbar(); NR=> enemies are one shot kills and do not need a healthbar
         speed = 4;
         cooldown = 90;
         vel = new Vector(-speed, 0);
-        
     
     }
     
@@ -35,8 +37,8 @@ public class Enemy extends A_Enemy {
             pos = new Vector(getX(), getY());
         }
         
-        moveTimer++;
-        //checkBounds();
+        //moveTimer++;NR => LQ not needed
+        
         move();
         
         if (shotTimer > cooldown) {
@@ -46,32 +48,13 @@ public class Enemy extends A_Enemy {
         }
         
         shotTimer++;
-        
-    }
-    
-    
-    public void move(double speed) {
-        
-        if(Util.distance(mX,mY, getX(), getY())<speed){
-            
-            getRandomLocation();
-            
-        }
-        else {
-            
-            turnTowards((int)mX, (int)mY);
-          
-            move();
-            
-    
-        }
-    
+        checkBounds();
     }
     
     void fire() {
-        Bullet temp = new Bullet(0);
+        EnemyBullet temp = new EnemyBullet(20);//NR=>LQ, NA The damage was 0 but should be an enemy damage variable
         
-        
+        /*
          if(!shot.isPlaying()) {
             
             shot.play();
@@ -82,10 +65,12 @@ public class Enemy extends A_Enemy {
             shot.stop();
             shot.play();
             
-        }
+        }*/
+        //use the sound poolclass
+        game.enemyShot.play();
         
         game.addObject(temp, getX(), getY());
-        temp.move(img.getWidth()/2);
+        //temp.move(img.getWidth()/2);
         
         shotTimer = 0;
     }
@@ -93,10 +78,10 @@ public class Enemy extends A_Enemy {
     
     public void getRandomLocation() {
      //get a random moveX
-        mX = Util.random(0, game.getWidth());
+       // mX = Util.random(0, game.getWidth());
         //get a random moveX
-        mY = Util.random(0, game.getHeight());
-        moveTimer = 0;
+     //   mY = Util.random(0, game.getHeight());
+     //   moveTimer = 0;
         
     }
     

@@ -3,6 +3,7 @@
 
 # Greenfoot project files
 project.greenfoot
+*.greenfoot
 
 # Log file
 *.log

@@ -22,7 +22,10 @@ import java.util.ArrayList;
  * reset()
  * 
  */
-public abstract class A_Game extends World
+
+
+//NR I made this nonabstract to see if the game would allow the Asteroids to leave.
+public  class A_Game extends World
 {
     protected Player player;
     protected ArrayList<Wave> waves;//NR allows us to scale based on number of wave files present
@@ -51,16 +54,13 @@ public abstract class A_Game extends World
      * Constructor for objects of class AGame.
      * 
      */
-    public A_Game(int w, int h)
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(w, h, 1, false); 
-        
+    public A_Game (int w, int h, int siz, boolean bounded){
+        super(w, h, siz, false);
     }
-    
+    /*
     protected abstract void updateBackground();
     public abstract void start();
     protected abstract void pause();
     protected abstract void reset();
-    
+    */
 }

@@ -12,17 +12,23 @@ public class FastFire extends A_Weapon
     {
         this.coolDown = 5;
         this.damage = 10;
+        
+        bullets = new Bullet[100];
+        for (int i = 0; i < bullets.length; i++)
+        {
+            bullets[i] = new Bullet(damage);
+        }
     }
     
     /**
      * Act - do whatever the Weapons wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
+    public void main()
     {
-        if (world == null)
+        if (game == null)
         {
-            world = getWorld();
+            game = (Game)getWorld();
         }
         //Checks to see if space bar was pressed
         if (Greenfoot.isKeyDown("space") && shotTimer >= coolDown)
@@ -38,7 +44,7 @@ public class FastFire extends A_Weapon
     public void fire()
     {
         Bullet temp = new Bullet(damage);
-        world.addObject(temp, getX(), getY());
+        game.addObject(temp, getX(), getY());
         temp.move(getImage().getWidth()/2);
         
         shotTimer = 0;
