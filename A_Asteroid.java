@@ -26,8 +26,8 @@ public abstract class A_Asteroid extends VecActor {
     
     
     // Game and image variables 
-    GreenfootImage img;
-    Game game;
+    protected GreenfootImage img;
+    protected Game game;
     
     /**
      * Method collide has not been created yet. 

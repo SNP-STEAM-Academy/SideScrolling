@@ -1,6 +1,7 @@
 #Greenfoot project file
 class.Asteroid.image=Asteroid.png
 class.Boss.image=DeathStar.png
+<<<<<<< HEAD
 class.Enemy.image=TIEfighter.png
 dependency1.from=A_Game
 dependency1.to=Player
@@ -31,6 +32,46 @@ dependency17.to=Ship
 dependency17.type=UsesDependency
 dependency18.from=UI
 dependency18.to=Ship
+=======
+class.Bullet.image=Bullet.png
+class.Enemy.image=TIEfighter.png
+class.EnemyBullet.image=Bullet.png
+class.Game.image=CorusantBattle2.png
+class.Healthbar.image=Health.png
+class.Ship.image=AWing_Blue.png
+class.TitleScreen.image=TitleScreenboth1.gif
+class.UI.image=BannerUI.png
+class.WeavingEnemy.image=TIEfighter.png
+dependency1.from=A_Game
+dependency1.to=Player
+dependency1.type=UsesDependency
+dependency10.from=Game
+dependency10.to=Wave
+dependency10.type=UsesDependency
+dependency11.from=Game
+dependency11.to=Spawner
+dependency11.type=UsesDependency
+dependency12.from=Game
+dependency12.to=Util
+dependency12.type=UsesDependency
+dependency13.from=A_TitleScreen
+dependency13.to=Game
+dependency13.type=UsesDependency
+dependency14.from=TitleScreen
+dependency14.to=GifImage
+dependency14.type=UsesDependency
+dependency15.from=TitleScreen
+dependency15.to=Game
+dependency15.type=UsesDependency
+dependency16.from=TitleScreen
+dependency16.to=Label
+dependency16.type=UsesDependency
+dependency17.from=A_Spawner
+dependency17.to=EnemyType
+dependency17.type=UsesDependency
+dependency18.from=A_Spawner
+dependency18.to=A_Asteroid
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 dependency18.type=UsesDependency
 dependency19.from=A_Healthbar
 dependency19.to=Ship
@@ -66,16 +107,20 @@ dependency28.from=A_Enemy
 dependency28.to=Healthbar
 dependency28.type=UsesDependency
 dependency29.from=Enemy
+<<<<<<< HEAD
 dependency29.to=Healthbar
+=======
+dependency29.to=Vector
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 dependency29.type=UsesDependency
 dependency3.from=A_Game
 dependency3.to=UI
 dependency3.type=UsesDependency
 dependency30.from=Enemy
-dependency30.to=Vector
+dependency30.to=Game
 dependency30.type=UsesDependency
 dependency31.from=Enemy
-dependency31.to=Game
+dependency31.to=Bullet
 dependency31.type=UsesDependency
 dependency32.from=Enemy
 dependency32.to=Bullet
@@ -84,6 +129,7 @@ dependency33.from=Enemy
 dependency33.to=Util
 dependency33.type=UsesDependency
 dependency34.from=A_Boss
+<<<<<<< HEAD
 dependency34.to=Game
 dependency34.type=UsesDependency
 dependency35.from=A_Boss
@@ -100,12 +146,35 @@ dependency38.to=Asteroid
 dependency38.type=UsesDependency
 dependency39.from=Asteroid_new
 dependency39.to=Util
+=======
+dependency34.to=Weapon
+dependency34.type=UsesDependency
+dependency35.from=Asteroid_new
+dependency35.to=Game
+dependency35.type=UsesDependency
+dependency36.from=Asteroid_new
+dependency36.to=Vector
+dependency36.type=UsesDependency
+dependency37.from=Asteroid_new
+dependency37.to=Asteroid
+dependency37.type=UsesDependency
+dependency38.from=Asteroid_new
+dependency38.to=Util
+dependency38.type=UsesDependency
+dependency39.from=Asteroid_new
+dependency39.to=Bullet
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 dependency39.type=UsesDependency
 dependency4.from=A_Game
 dependency4.to=Ship
 dependency4.type=UsesDependency
+<<<<<<< HEAD
 dependency40.from=Asteroid_new
 dependency40.to=Bullet
+=======
+dependency40.from=A_Pickup
+dependency40.to=Ship
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 dependency40.type=UsesDependency
 dependency41.from=A_Ship
 dependency41.to=Game
@@ -140,16 +209,59 @@ dependency5.type=UsesDependency
 dependency50.from=HighDamage
 dependency50.to=Bullet
 dependency50.type=UsesDependency
+<<<<<<< HEAD
 dependency51.from=A_Bullet
 dependency51.to=Ship
 dependency51.type=UsesDependency
+=======
+dependency51.from=FastFire
+dependency51.to=Bullet
+dependency51.type=UsesDependency
+dependency52.from=A_Bullet
+dependency52.to=Ship
+dependency52.type=UsesDependency
+dependency53.from=A_UI
+dependency53.to=Ship
+dependency53.type=UsesDependency
+dependency54.from=UI
+dependency54.to=Ship
+dependency54.type=UsesDependency
+dependency55.from=A_Wave
+dependency55.to=Asteroid
+dependency55.type=UsesDependency
+dependency56.from=A_Wave
+dependency56.to=Game
+dependency56.type=UsesDependency
+dependency57.from=Wave
+dependency57.to=Game
+dependency57.type=UsesDependency
+dependency58.from=Wave
+dependency58.to=Asteroid
+dependency58.type=UsesDependency
+dependency59.from=Wave
+dependency59.to=Enemy
+dependency59.type=UsesDependency
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 dependency6.from=A_Game
 dependency6.to=TitleScreen
 dependency6.type=UsesDependency
+dependency60.from=Wave
+dependency60.to=WeavingEnemy
+dependency60.type=UsesDependency
+dependency61.from=Wave
+dependency61.to=Boss
+dependency61.type=UsesDependency
+dependency62.from=A_Vector
+dependency62.to=Vector
+dependency62.type=UsesDependency
+dependency63.from=Vector
+dependency63.to=Util
+dependency63.type=UsesDependency
 dependency7.from=Game
-dependency7.to=Ship
+dependency7.to=TitleScreen
 dependency7.type=UsesDependency
 dependency8.from=Game
+<<<<<<< HEAD
 dependency8.to=Wave
 dependency8.type=UsesDependency
 dependency9.from=Game
@@ -163,6 +275,21 @@ height=27
 package.numDependencies=51
 package.numTargets=42
 project.charset=windows-1252
+=======
+dependency8.to=SoundPool
+dependency8.type=UsesDependency
+dependency9.from=Game
+dependency9.to=Ship
+dependency9.type=UsesDependency
+editor.fx.0.height=1096
+editor.fx.0.width=1936
+editor.fx.0.x=-8
+editor.fx.0.y=-8
+height=1096
+package.numDependencies=63
+package.numTargets=50
+project.charset=UTF-8
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 publish.hasSource=false
 publish.locked=true
 publish.longDesc=
@@ -184,294 +311,521 @@ target1.width=120
 target1.x=0
 target1.y=0
 target10.height=70
+<<<<<<< HEAD
 target10.name=Weapon
+=======
+target10.name=Asteroid
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=120
 target10.x=0
 target10.y=0
 target11.height=70
+<<<<<<< HEAD
 target11.name=TitleScreen
+=======
+target11.name=UI
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target11.showInterface=false
 target11.type=ClassTarget
 target11.width=120
 target11.x=0
 target11.y=0
 target12.height=70
+<<<<<<< HEAD
 target12.name=Boss
+=======
+target12.name=A_Game
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target12.showInterface=false
-target12.type=ClassTarget
+target12.type=AbstractTarget
 target12.width=120
 target12.x=0
 target12.y=0
 target13.height=70
+<<<<<<< HEAD
 target13.name=Asteroid
+=======
+target13.name=Enemy
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=120
 target13.x=0
 target13.y=0
 target14.height=70
+<<<<<<< HEAD
 target14.name=UI
+=======
+target14.name=A_Wave
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target14.showInterface=false
-target14.type=ClassTarget
+target14.type=AbstractTarget
 target14.width=120
 target14.x=0
 target14.y=0
 target15.height=70
+<<<<<<< HEAD
 target15.name=A_Game
+=======
+target15.name=A_Healthbar
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target15.showInterface=false
 target15.type=AbstractTarget
 target15.width=120
 target15.x=0
 target15.y=0
 target16.height=70
+<<<<<<< HEAD
 target16.name=A_Ship
+=======
+target16.name=Spawner
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target16.showInterface=false
-target16.type=AbstractTarget
+target16.type=ClassTarget
 target16.width=120
 target16.x=0
 target16.y=0
 target17.height=70
+<<<<<<< HEAD
 target17.name=Enemy
+=======
+target17.name=EnemyType
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target17.showInterface=false
-target17.type=ClassTarget
+target17.type=EnumTarget
 target17.width=120
 target17.x=0
 target17.y=0
 target18.height=70
+<<<<<<< HEAD
 target18.name=A_Wave
+=======
+target18.name=Vector
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target18.showInterface=false
-target18.type=AbstractTarget
+target18.type=ClassTarget
 target18.width=120
 target18.x=0
 target18.y=0
 target19.height=70
+<<<<<<< HEAD
 target19.name=A_Healthbar
+=======
+target19.name=ThreeWay
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target19.showInterface=false
-target19.type=AbstractTarget
+target19.type=ClassTarget
 target19.width=120
 target19.x=0
 target19.y=0
 target2.height=70
-target2.name=FastFire
+target2.name=A_Spawner
 target2.showInterface=false
-target2.type=ClassTarget
+target2.type=AbstractTarget
 target2.width=120
 target2.x=0
 target2.y=0
 target20.height=70
+<<<<<<< HEAD
 target20.name=Spawner
+=======
+target20.name=Player
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target20.showInterface=false
 target20.type=ClassTarget
 target20.width=120
 target20.x=0
 target20.y=0
 target21.height=70
+<<<<<<< HEAD
 target21.name=EnemyType
 target21.showInterface=false
 target21.type=EnumTarget
+=======
+target21.name=EnemyBullet
+target21.showInterface=false
+target21.type=ClassTarget
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target21.width=120
 target21.x=0
 target21.y=0
 target22.height=70
+<<<<<<< HEAD
 target22.name=Vector
+=======
+target22.name=Healthbar
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target22.showInterface=false
 target22.type=ClassTarget
 target22.width=120
 target22.x=0
 target22.y=0
 target23.height=70
+<<<<<<< HEAD
 target23.name=ThreeWay
+=======
+target23.name=I_Upgradeable
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target23.showInterface=false
 target23.type=ClassTarget
 target23.width=120
 target23.x=0
 target23.y=0
 target24.height=70
+<<<<<<< HEAD
 target24.name=Bullet
+=======
+target24.name=A_VecActor
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target24.showInterface=false
-target24.type=ClassTarget
+target24.type=AbstractTarget
 target24.width=120
 target24.x=0
 target24.y=0
 target25.height=70
+<<<<<<< HEAD
 target25.name=Player
+=======
+target25.name=ShotGun
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target25.showInterface=false
 target25.type=ClassTarget
 target25.width=120
 target25.x=0
 target25.y=0
 target26.height=70
+<<<<<<< HEAD
 target26.name=Healthbar
+=======
+target26.name=Asteroid_new
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target26.showInterface=false
 target26.type=ClassTarget
 target26.width=120
 target26.x=0
 target26.y=0
 target27.height=70
+<<<<<<< HEAD
 target27.name=I_Upgradeable
+=======
+target27.name=GifImage
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target27.showInterface=false
 target27.type=ClassTarget
 target27.width=120
 target27.x=0
 target27.y=0
 target28.height=70
+<<<<<<< HEAD
 target28.name=A_VecActor
+=======
+target28.name=Wave
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target28.showInterface=false
-target28.type=AbstractTarget
+target28.type=ClassTarget
 target28.width=120
 target28.x=0
 target28.y=0
 target29.height=70
+<<<<<<< HEAD
 target29.name=ShotGun
+=======
+target29.name=Game
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target29.showInterface=false
 target29.type=ClassTarget
 target29.width=120
 target29.x=0
 target29.y=0
 target3.height=70
-target3.name=A_Asteroid
+target3.name=Label
 target3.showInterface=false
-target3.type=AbstractTarget
+target3.type=ClassTarget
 target3.width=120
 target3.x=0
 target3.y=0
 target30.height=70
+<<<<<<< HEAD
 target30.name=A_PowerUp
+=======
+target30.name=A_Weapon
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target30.showInterface=false
 target30.type=AbstractTarget
 target30.width=120
 target30.x=0
 target30.y=0
 target31.height=70
+<<<<<<< HEAD
 target31.name=Asteroid_new
+=======
+target31.name=Stats
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target31.showInterface=false
 target31.type=ClassTarget
 target31.width=120
 target31.x=0
 target31.y=0
 target32.height=70
+<<<<<<< HEAD
 target32.name=GifImage
+=======
+target32.name=A_TitleScreen
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target32.showInterface=false
-target32.type=ClassTarget
+target32.type=AbstractTarget
 target32.width=120
 target32.x=0
 target32.y=0
 target33.height=70
+<<<<<<< HEAD
 target33.name=Wave
+=======
+target33.name=A_Vector
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target33.showInterface=false
-target33.type=ClassTarget
+target33.type=AbstractTarget
 target33.width=120
 target33.x=0
 target33.y=0
 target34.height=70
+<<<<<<< HEAD
 target34.name=Game
+=======
+target34.name=HighDamage
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target34.showInterface=false
 target34.type=ClassTarget
 target34.width=120
 target34.x=0
 target34.y=0
 target35.height=70
+<<<<<<< HEAD
 target35.name=A_Weapon
+=======
+target35.name=A_Bullet
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target35.showInterface=false
 target35.type=AbstractTarget
 target35.width=120
 target35.x=0
 target35.y=0
 target36.height=70
+<<<<<<< HEAD
 target36.name=PowerUp
+=======
+target36.name=FastFire
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target36.showInterface=false
 target36.type=ClassTarget
 target36.width=120
 target36.x=0
 target36.y=0
 target37.height=70
+<<<<<<< HEAD
 target37.name=A_TitleScreen
+=======
+target37.name=A_Asteroid
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target37.showInterface=false
 target37.type=AbstractTarget
 target37.width=120
 target37.x=0
 target37.y=0
 target38.height=70
+<<<<<<< HEAD
 target38.name=A_Vector
 target38.showInterface=false
 target38.type=AbstractTarget
+=======
+target38.name=PickUp
+target38.showInterface=false
+target38.type=ClassTarget
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target38.width=120
 target38.x=0
 target38.y=0
 target39.height=70
+<<<<<<< HEAD
 target39.name=A_Enemy
+=======
+target39.name=A_Pickup
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target39.showInterface=false
 target39.type=AbstractTarget
 target39.width=120
 target39.x=0
 target39.y=0
 target4.height=70
+<<<<<<< HEAD
 target4.name=A_Spawner
+=======
+target4.name=Util
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target4.showInterface=false
-target4.type=AbstractTarget
+target4.type=ClassTarget
 target4.width=120
 target4.x=0
 target4.y=0
 target40.height=70
+<<<<<<< HEAD
 target40.name=Ship
 target40.showInterface=false
 target40.type=ClassTarget
+=======
+target40.name=A_UI
+target40.showInterface=false
+target40.type=AbstractTarget
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target40.width=120
 target40.x=0
 target40.y=0
 target41.height=70
+<<<<<<< HEAD
 target41.name=HighDamage
+=======
+target41.name=SoundPool
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target41.showInterface=false
 target41.type=ClassTarget
 target41.width=120
 target41.x=0
 target41.y=0
 target42.height=70
+<<<<<<< HEAD
 target42.name=A_Bullet
+=======
+target42.name=VecActor
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target42.showInterface=false
-target42.type=AbstractTarget
+target42.type=ClassTarget
 target42.width=120
 target42.x=0
 target42.y=0
+<<<<<<< HEAD
 target5.height=70
 target5.name=Util
+=======
+target43.height=70
+target43.name=A_Ship
+target43.showInterface=false
+target43.type=AbstractTarget
+target43.width=120
+target43.x=0
+target43.y=0
+target44.height=70
+target44.name=Bullet
+target44.showInterface=false
+target44.type=ClassTarget
+target44.width=120
+target44.x=0
+target44.y=0
+target45.height=70
+target45.name=A_PowerUp
+target45.showInterface=false
+target45.type=AbstractTarget
+target45.width=120
+target45.x=0
+target45.y=0
+target46.height=70
+target46.name=WeavingEnemy
+target46.showInterface=false
+target46.type=ClassTarget
+target46.width=120
+target46.x=0
+target46.y=0
+target47.height=70
+target47.name=A_Button
+target47.showInterface=false
+target47.type=ClassTarget
+target47.width=120
+target47.x=0
+target47.y=0
+target48.height=70
+target48.name=PowerUp
+target48.showInterface=false
+target48.type=ClassTarget
+target48.width=120
+target48.x=0
+target48.y=0
+target49.height=70
+target49.name=A_Enemy
+target49.showInterface=false
+target49.type=AbstractTarget
+target49.width=120
+target49.x=0
+target49.y=0
+target5.height=70
+target5.name=I_Damageable
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target5.showInterface=false
-target5.type=ClassTarget
+target5.type=InterfaceTarget
 target5.width=120
 target5.x=0
 target5.y=0
+target50.height=70
+target50.name=Ship
+target50.showInterface=false
+target50.type=ClassTarget
+target50.width=120
+target50.x=0
+target50.y=0
 target6.height=70
+<<<<<<< HEAD
 target6.name=A_UI
+=======
+target6.name=A_Boss
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target6.showInterface=false
 target6.type=AbstractTarget
 target6.width=120
 target6.x=0
 target6.y=0
 target7.height=70
+<<<<<<< HEAD
 target7.name=I_Damageable
 target7.showInterface=false
 target7.type=InterfaceTarget
+=======
+target7.name=Weapon
+target7.showInterface=false
+target7.type=ClassTarget
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target7.width=120
 target7.x=0
 target7.y=0
 target8.height=70
+<<<<<<< HEAD
 target8.name=VecActor
+=======
+target8.name=TitleScreen
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=120
 target8.x=0
 target8.y=0
 target9.height=70
+<<<<<<< HEAD
 target9.name=A_Boss
 target9.showInterface=false
 target9.type=AbstractTarget
+=======
+target9.name=Boss
+target9.showInterface=false
+target9.type=ClassTarget
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=159
+=======
+width=1936
+>>>>>>> d776ccadfdb67fef6b67ed7b0926d465a773916d
 world.lastInstantiated=Game
 xPosition=0
 yPosition=0

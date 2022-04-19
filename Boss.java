@@ -29,7 +29,7 @@ public class Boss extends A_Boss
      */
     public void act()
     {
-       
+       super.act();
     }
     
     

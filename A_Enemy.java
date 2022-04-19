@@ -9,27 +9,27 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public abstract class A_Enemy extends Asteroid {
-    
+    //NR=>LQ probably not needed
     /** cooldown to drive towards a random point for 300 frames / 5 seconds **/
-    protected int moveCooldown;
+    //protected int moveCooldown;
     
     /** timer to drive towards a random point for 5 seconds **/
-    protected int moveTimer;
+    //protected int moveTimer;
     
-    protected int move;
+    //protected int move;
     protected int cooldown;
     protected int shotTimer = 0;
     
     /** random x for the Enemy to drive towards **/
-    protected double mX;
+    //protected double mX;
     
     /** random y for the Enemy to drive towards **/
-    protected double mY;
+    //protected double mY;
     
-    Game game;
-    Healthbar healthBar;
-    GreenfootImage img;
-    GreenfootSound shot;
+    //Game game;
+    protected Healthbar healthBar;
+    protected GreenfootImage img;
+    //protected GreenfootSound shot; //NR use soundpool
    
     //public abstract void move(double speed);
     

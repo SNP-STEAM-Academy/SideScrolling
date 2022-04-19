@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Asteroid extends A_Asteroid {
     
-    private int SPREAD = 10;
+    private int SPREAD = 20;
     /**
      * Constructor for objects of class Asteroid.
      * 
@@ -59,15 +59,7 @@ public class Asteroid extends A_Asteroid {
         move(); //NRthis does all the movement
         turn(rotSpeed); // spin  NR=>moved here to keep it with other updating of variables
         
-        if (getX() > game.getWidth() + 300 || getX() < -300 || getY() > game.getHeight() + 300 || getY() < -300) {
-            
-            //yes ==> remove from world
-            Util.say("Removed at "+getX()+", "+getY());
-            game.removeObject(this);
-            
-            return;
-            
-        }
+        checkBounds();
         
         /*
         if (getY() < getRotation() || getY() > getRotation()) // check limits
@@ -111,8 +103,23 @@ public class Asteroid extends A_Asteroid {
     
     }// end collide()
     
-    
-    
+    //NR=>LQ Added checkBounds to remove excess enemies and asteroids
+    protected void checkBounds(){
+        if (game == null){
+            Util.say("How did the game get null?"+game);
+            game = (Game)getWorld();
+            return;
+        }
+        Util.say(""+game);
+        if (pos.getX() > game.getWidth() + 500 || pos.getX() < -500 || pos.getY() > game.getHeight() + 500 || pos.getY() < -500) {
+            
+            //yes ==> remove from world
+            Util.say("Removed at "+getX()+", "+getY());
+            game.removeObject(this);
+            
+        }
+    }
+
 
     /**
      * Method split has not been created yet. 
