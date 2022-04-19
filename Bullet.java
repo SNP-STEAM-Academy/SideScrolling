@@ -28,9 +28,9 @@ public class Bullet extends A_Bullet
      */
     public void act()
     {
-        if (world == null)
+        if (game == null)
         {
-            world = getWorld();
+            game = (Game)getWorld();
         }
         move(speed);
         checkHit(Asteroid.class);
@@ -51,7 +51,7 @@ public class Bullet extends A_Bullet
     {
         t.damage(damage);//NR=>LQ the Asteroid need a takeDamage function, it should at teh very least remove the Asteroid
         //add pick up construcror 
-        world.removeObject(this);
+        game.removeObject(this);
     }
     
     protected void causeDamage(Ship hit)
@@ -62,13 +62,13 @@ public class Bullet extends A_Bullet
     
     protected void checkBounds()
     {
-        if (world == null)
+        if (game == null)
         {
             return;//NR protect from a null pointer exception from the check hit method
         }
-        if (getX() > (world.getWidth() + 50))
+        if (getX() > (game.getWidth() + 50) || getX() < -50 || getY() > (game.getHeight() + 50) || getY() < -50)
         {
-            world.removeObject(this);
+            game.removeObject(this);
             return;
         }
     }
