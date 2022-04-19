@@ -41,4 +41,12 @@ public class EnemyBullet extends Bullet
         checkBounds();
         checkHit(Ship.class);
     }
+    
+    protected void checkHit(Class targetClass){
+        //try to get an object we intersected with
+        Ship target = (Ship)getOneIntersectingObject(targetClass);//NR for the enemy bullet you need to override the checkHit call and causedamage as the Ship is not a subclass of Asteroid
+        if (target != null){
+            causeDamage(target);
+        }
+    }
 }

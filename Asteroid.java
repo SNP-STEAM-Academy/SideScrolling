@@ -120,12 +120,13 @@ public class Asteroid extends A_Asteroid {
         }
     }
 
+
     public void damage(int d) {
         
         split();
         
     }
-    
+
 
     
     /**

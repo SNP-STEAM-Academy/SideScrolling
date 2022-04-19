@@ -41,14 +41,17 @@ public class VecActor extends A_VecActor
     }
     
     public void setLocation(int x, int y){
+        pos = new Vector((int)x, (int)y);
         super.setLocation(x, y);
     }
     
     public void setLocation(double x, double y){
+        pos = new Vector (x, y);
         super.setLocation((int)x + 0.5, (int) y + 0.5);
     }
     
     public void setLocation(Vector p){
+        pos = p;
         setLocation(p.getX(), p.getY());
     }
         

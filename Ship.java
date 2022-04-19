@@ -13,7 +13,6 @@ public class Ship extends A_Ship
      */
     public Ship()
     {
-
         vel = new Vector();
     }
     
@@ -26,24 +25,22 @@ public class Ship extends A_Ship
         if (game == null)
         {
             game = (Game)getWorld();
-
+            img = getImage();
             pos = new Vector((double)game.getWidth()*0.2,(double)game.getHeight()*0.5);
         }
         
         checkKeys();
-        checkBounds();
         move();
+        checkBounds();
         
         Asteroid temp = (Asteroid)getOneIntersectingObject(Asteroid.class);
-        
-        //mouse info
-        //mouse = Greenfoot.getMouseInfo();
     }
-    
-    
     
     protected void checkKeys()
     {
+        //ship fire
+        
+        
         //get a new velocity vector
         vel = new Vector();
         if (Greenfoot.isKeyDown("w"))
@@ -73,7 +70,29 @@ public class Ship extends A_Ship
     
     protected void checkBounds()
     {
+        if (pos.getX() > game.getWidth() - img.getWidth()/2)
+        {//right wall
+            pos = new Vector(game.getWidth() - img.getWidth()/2, pos.getY());
+            setLocation(pos);
+        }
         
+        if (pos.getX() < 0 + img.getWidth()/2)
+        {//left wall
+            //new Vector(img.getWidth()/2, pos.getY());
+            setLocation(new Vector(img.getWidth()/2, pos.getY()));
+        }
+        
+        if (pos.getY() > game.getHeight() - img.getHeight()/2) 
+        {//bottom wall
+            pos = new Vector(pos.getX(), game.getHeight() - img.getHeight()/2);
+            setLocation(pos);
+        }
+        
+        if (pos.getY() < + 100 + img.getHeight()/2)
+        {//top wall
+            pos = new Vector(pos.getX(), 100 + img.getHeight()/2);
+            setLocation(pos);
+        }
     }
     
     /**

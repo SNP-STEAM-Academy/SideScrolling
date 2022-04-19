@@ -15,7 +15,6 @@ public abstract class A_Ship extends VecActor implements I_Damageable
     
     protected Game game;    
     protected GreenfootImage img;
-    //MouseInfo mouse;
     
     //Healthbar healthbar;
     int maxhealth = 600;
@@ -25,5 +24,6 @@ public abstract class A_Ship extends VecActor implements I_Damageable
     protected abstract void down();
     protected abstract void left();
     protected abstract void right();
+    
     
 }
