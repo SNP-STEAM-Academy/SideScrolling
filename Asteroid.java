@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Asteroid extends A_Asteroid {
     
+    private int SPREAD = 20;
     /**
      * Constructor for objects of class Asteroid.
      * 
@@ -16,16 +17,9 @@ public class Asteroid extends A_Asteroid {
      * Gets a random speed from the Util class. 
      */
     public Asteroid() {
-         
         size = Util.random(5*minSize, maxSize);
-        img = getImage();
-        img.scale(size, size);
         
-        //turn to ensure the asteroids come in at different angles 
-        //turn(Util.random(-45,46));
-  
-        speed = Util.random(minSpeed, maxSpeed);
-        
+        setParameters();
     }// end Asteroid()
     
     /**
@@ -37,18 +31,10 @@ public class Asteroid extends A_Asteroid {
      * 
      */
     public Asteroid(int siz) {
-        
         size = siz;
+        setParameters();
         
-        img = getImage();
-        img.scale(size, size);
-        speed = Util.random(minSpeed, maxSpeed);
-        
-    }// end Asteroid()
-    
-    
-    
-    
+    }// end Asteroid()   
     
     /**
      * Act - do whatever the Asteroid wants to do. This method is called whenever
@@ -61,6 +47,7 @@ public class Asteroid extends A_Asteroid {
             
             game = (Game)getWorld();
             turnTowards(game.getWidth()/2,game.getHeight()/2);
+            turn(Util.random(-SPREAD, SPREAD));
             //get out position
             //NR=>JN need to move this to a vector method
             pos = new Vector((double)getX(),(double)getY());
@@ -69,28 +56,42 @@ public class Asteroid extends A_Asteroid {
             //get our velocity
         }
         //move
-        move();
+        move(); //NRthis does all the movement
+        turn(rotSpeed); // spin  NR=>moved here to keep it with other updating of variables
         
-        if (getX() > game.getWidth() + 500 || getX() < -500 || getY() > game.getWidth() + 500 || getY() < -500) {
-            
-            //yes ==> remove from world
-            System.out.println("Removed at "+getX()+", "+getY());
-            game.removeObject(this);
-            
-            return;
-            
+        checkBounds();
+        
+        /*
+        if (getY() < getRotation() || getY() > getRotation()) // check limits
+        {
+            xSpeed   = -xSpeed;
+            ySpeed = -ySpeed; 
+            //getImage().mirrorHorizontally(); // mirror image
         }
-        
-        Actor temp = getOneIntersectingObject(Bullet.class);
+        */
+       
+       //NR=>LQ, NA this should probably lie with the bullet class
+       //since the split method is already public
+       /* Actor temp = getOneIntersectingObject(Bullet.class);
         
         if (temp != null) {
             split(temp);
             
         }    
-                
+        */        
     }// end act()
     
     
+    //NR used to set the parameters of the asteroid in the constructors in one spot 
+    private void setParameters(){
+        
+        img = getImage();
+        img.scale(size, size);
+  
+        speed = Util.random(minSpeed, maxSpeed);
+        rotSpeed = Util.random(minRotation, maxRotation);
+        
+    }
     
     
     
@@ -102,8 +103,23 @@ public class Asteroid extends A_Asteroid {
     
     }// end collide()
     
-    
-    
+    //NR=>LQ Added checkBounds to remove excess enemies and asteroids
+    protected void checkBounds(){
+        if (game == null){
+            Util.say("How did the game get null?"+game);
+            game = (Game)getWorld();
+            return;
+        }
+        Util.say(""+game);
+        if (pos.getX() > game.getWidth() + 500 || pos.getX() < -500 || pos.getY() > game.getHeight() + 500 || pos.getY() < -500) {
+            
+            //yes ==> remove from world
+            Util.say("Removed at "+getX()+", "+getY());
+            game.removeObject(this);
+            
+        }
+    }
+
 
     /**
      * Method split has not been created yet. 

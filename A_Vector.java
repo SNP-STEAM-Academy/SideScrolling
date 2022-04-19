@@ -14,7 +14,8 @@ public abstract class A_Vector
 {
     protected double x;//changed from int
     protected double y;//changed from int
-    protected double angle;
+    protected double angle;//angle in degrees
+    protected double theta;//angle in radians
     protected double mag;
     
     public abstract void add(Vector other);
@@ -36,6 +37,7 @@ public abstract class A_Vector
     public abstract double calcMag();
     public abstract double getX();
     public abstract double getY();
+    
     public  double[] asArray(){
         return new double[]{x,y};
     }

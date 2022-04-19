@@ -1,57 +1,44 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 
 /**
  * Write a description of class EnemyBullet here.
  * 
- * @author Nicodemus Allan
- * @version March 14 2022
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class EnemyBullet extends A_Bullet
+public class EnemyBullet extends Bullet
 {
-    public EnemyBullet(int damage)
-    {
-        this.damage = damage;
-        this.speed = 15;
+    public int damage = 25;//just an example damage, change for progression
+    protected Game game;
+    protected int speed = 8;
+    public EnemyBullet(int d){
+        damage = d;
+        
     }
+    
+    
     /**
      * Act - do whatever the EnemyBullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
-        //vel.x(speed);
+        if (game == null){
+            game = (Game)getWorld(); 
+            //if close enough, aim at the ship
+            List<Ship> targets = getObjectsInRange(game.getWidth(), Ship.class);
+            
+            if (targets.size() > 0){
+                turnTowards(targets.get(0).getX(), targets.get(0).getY());
+            }
+            else{
+                //or just go straight
+                turn(180);
+            }
+        }
+        move(speed);
         checkBounds();
         
-        Ship hit = (Ship)getOneIntersectingObject(Ship.class);
-        if(hit == ship)
-        {
-            hit = null;
-        }
-        causeDamage(hit);
-        
-    }
-    
-    protected void causeDamage(Ship hit)
-    {
-        if (hit == null)
-        {
-            return;
-        }
-        world.removeObject(hit);
-        world.removeObject(this);
-    }
-    
-    protected void checkBounds()
-    {
-        if (world == null)
-        {
-            world = getWorld();
-        }
-        if (getX() > (world.getWidth() + 50))
-        {
-            world.removeObject(this);
-            System.out.println("EnemeyBullet Removed");
-            return;
-        }
     }
 }

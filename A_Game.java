@@ -22,7 +22,10 @@ import java.util.ArrayList;
  * reset()
  * 
  */
-public abstract class A_Game extends World
+
+
+//NR I made this nonabstract to see if the game would allow the Asteroids to leave.
+public  class A_Game extends World
 {
     protected Player player;
     protected ArrayList<Wave> waves;//NR allows us to scale based on number of wave files present
@@ -31,32 +34,33 @@ public abstract class A_Game extends World
     protected GreenfootImage[] backgrounds;
     protected int state;
     
+
+    //public static boolean DEBUG = false;
+
     boolean DEBUG = false;
+
     
-    Ship ship;//NR prob not needed as the waves can specify the tiems
-    PowerUp powerup;
-    TitleScreen title;
+    protected Ship ship;//NR prob not needed as the waves can specify the tiems
+    protected PowerUp powerup;
+    protected TitleScreen title;
     //PauseMenu pause;
     
-    private int lives = 3;//NR perhaps replace this with a Player object
-    private int Spawncooldown = 10;//NR prob not needed as the waves can specify the tiems
-    private int Minspawncooldown = 25;//NR prob not needed as the waves can specify the tiems
-    private int Maxspawncooldown = 75;//NR prob not needed as the waves can specify the tiems
+    protected int lives = 3;//NR perhaps replace this with a Player object
+    protected int Spawncooldown = 10;//NR prob not needed as the waves can specify the tiems
+    protected int Minspawncooldown = 25;//NR prob not needed as the waves can specify the tiems
+    protected int Maxspawncooldown = 75;//NR prob not needed as the waves can specify the tiems
     
     /**
      * Constructor for objects of class AGame.
      * 
      */
-    public A_Game(int w, int h)
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(w, h, 1, false); 
-        
+    public A_Game (int w, int h, int siz, boolean bounded){
+        super(w, h, siz, false);
     }
-    
+    /*
     protected abstract void updateBackground();
     public abstract void start();
     protected abstract void pause();
     protected abstract void reset();
-    
+    */
 }
