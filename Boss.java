@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.ArrayList;
 
 /**
  * Write a description of class Boss here.
@@ -15,7 +16,7 @@ public class Boss extends A_Boss
         
         img = getImage();
         //shot = new GreenfootSound("Button_Press.mp3");
-        //healthBar = new HealthBar(this);
+        healthBar = new Healthbar();
         speed = 100;
         cooldown = 10;
         
@@ -30,13 +31,21 @@ public class Boss extends A_Boss
     public void act()
     {
        super.act();
+       getHealth();
     }
     
     
+    void fire() {
+        // int eBullets;
+         // eBullets = new ArrayList<Bullet>();
+    
+    
+    
+    }
+    
     public void setHealthbar(){
-    
-        
-    
+        setHealth(30);
+         
     }
     
     //damage, heal, reset, setHealth, getHealth

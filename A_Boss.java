@@ -24,6 +24,7 @@ public abstract class A_Boss extends Enemy implements I_Damageable{
     
     
     // Game and image variables 
+   Healthbar healthBar;
     GreenfootImage img;
     Game game;
     Weapon weapon;
