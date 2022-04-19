@@ -51,11 +51,8 @@ public abstract class A_Game extends World
      * Constructor for objects of class AGame.
      * 
      */
-    public A_Game(int w, int h)
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(w, h, 1, false); 
-        
+    public A_Game (int w, int h, int siz, boolean bounded){
+        super(w, h, siz, bounded);
     }
     
     protected abstract void updateBackground();

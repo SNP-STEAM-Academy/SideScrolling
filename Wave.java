@@ -22,6 +22,9 @@ public class Wave extends A_Wave
             enemies.add(new Enemy());
         }
         else if (etype == 2){
+            enemies.add(new WeavingEnemy());
+        }
+        else if (etype == 3){
             enemies.add(new Boss());
         }
         times.add(new Long(time));

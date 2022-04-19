@@ -6,6 +6,7 @@ class.A_Ship.image=yWing.png\ (1).png
 class.Asteroid.image=Asteroid.png
 class.Boss.image=DeathStar.png
 class.Bullet.image=Bullet.png
+<<<<<<< Updated upstream
 class.Enemy.image=TIEfighter.png.png
 class.Game.image=CorusantBattle2.png
 class.Healthbar.image=Health.png
@@ -47,38 +48,62 @@ dependency19.from=UI
 =======
 dependency10.from=A_TitleScreen
 dependency10.to=Game
+=======
+class.Enemy.image=TIEfighter.png
+class.Game.image=CorusantBattle2.png
+class.Healthbar.image=Health.png
+class.Ship.image=AWing_Blue.png
+class.TitleScreen.image=TitleScreenboth1.gif
+class.UI.image=BannerUI.png
+class.WeavingEnemy.image=TIEfighter.png
+dependency1.from=A_Game
+dependency1.to=Player
+dependency1.type=UsesDependency
+dependency10.from=Game
+dependency10.to=Spawner
+>>>>>>> Stashed changes
 dependency10.type=UsesDependency
-dependency11.from=TitleScreen
-dependency11.to=GifImage
+dependency11.from=Game
+dependency11.to=Util
 dependency11.type=UsesDependency
-dependency12.from=TitleScreen
+dependency12.from=A_TitleScreen
 dependency12.to=Game
 dependency12.type=UsesDependency
-dependency13.from=A_Spawner
-dependency13.to=EnemyType
+dependency13.from=TitleScreen
+dependency13.to=GifImage
 dependency13.type=UsesDependency
+<<<<<<< Updated upstream
 dependency14.from=A_Spawner
 dependency14.to=A_Asteroid
+=======
+dependency14.from=TitleScreen
+dependency14.to=Game
+>>>>>>> Stashed changes
 dependency14.type=UsesDependency
-dependency15.from=Spawner
-dependency15.to=EnemyType
+dependency15.from=TitleScreen
+dependency15.to=Util
 dependency15.type=UsesDependency
-dependency16.from=A_UI
-dependency16.to=Ship
+dependency16.from=A_Spawner
+dependency16.to=EnemyType
 dependency16.type=UsesDependency
-dependency17.from=UI
-dependency17.to=Ship
+dependency17.from=A_Spawner
+dependency17.to=A_Asteroid
 dependency17.type=UsesDependency
-dependency18.from=A_Healthbar
+dependency18.from=A_UI
 dependency18.to=Ship
 dependency18.type=UsesDependency
+<<<<<<< Updated upstream
 dependency19.from=Healthbar
+>>>>>>> Stashed changes
+=======
+dependency19.from=UI
 >>>>>>> Stashed changes
 dependency19.to=Ship
 dependency19.type=UsesDependency
 dependency2.from=A_Game
 dependency2.to=Wave
 dependency2.type=UsesDependency
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 dependency20.from=A_Healthbar
 dependency20.to=Ship
@@ -111,25 +136,30 @@ dependency29.from=A_Enemy
 =======
 dependency20.from=A_VecActor
 dependency20.to=Vector
+=======
+dependency20.from=A_Healthbar
+dependency20.to=Ship
+>>>>>>> Stashed changes
 dependency20.type=UsesDependency
-dependency21.from=VecActor
-dependency21.to=Vector
+dependency21.from=Healthbar
+dependency21.to=Ship
 dependency21.type=UsesDependency
-dependency22.from=A_Asteroid
-dependency22.to=Game
+dependency22.from=A_VecActor
+dependency22.to=Vector
 dependency22.type=UsesDependency
-dependency23.from=Asteroid
-dependency23.to=Game
+dependency23.from=VecActor
+dependency23.to=Vector
 dependency23.type=UsesDependency
-dependency24.from=Asteroid
-dependency24.to=Vector
+dependency24.from=A_Asteroid
+dependency24.to=Game
 dependency24.type=UsesDependency
 dependency25.from=Asteroid
-dependency25.to=Util
+dependency25.to=Game
 dependency25.type=UsesDependency
 dependency26.from=Asteroid
-dependency26.to=Bullet
+dependency26.to=Vector
 dependency26.type=UsesDependency
+<<<<<<< Updated upstream
 dependency27.from=A_Boss
 dependency27.to=Game
 dependency27.type=UsesDependency
@@ -139,11 +169,20 @@ dependency28.type=UsesDependency
 dependency29.from=Asteroid_new
 >>>>>>> Stashed changes
 dependency29.to=Game
+=======
+dependency27.from=Asteroid
+dependency27.to=Util
+dependency27.type=UsesDependency
+dependency28.from=A_Enemy
+dependency28.to=Game
+dependency28.type=UsesDependency
+dependency29.from=A_Enemy
+dependency29.to=Healthbar
+>>>>>>> Stashed changes
 dependency29.type=UsesDependency
 dependency3.from=A_Game
 dependency3.to=UI
 dependency3.type=UsesDependency
-<<<<<<< Updated upstream
 dependency30.from=Enemy
 dependency30.to=Vector
 dependency30.type=UsesDependency
@@ -151,6 +190,7 @@ dependency31.from=Enemy
 dependency31.to=Game
 dependency31.type=UsesDependency
 dependency32.from=Enemy
+<<<<<<< Updated upstream
 dependency32.to=Util
 dependency32.type=UsesDependency
 dependency33.from=A_Boss
@@ -203,10 +243,35 @@ dependency38.type=UsesDependency
 dependency39.from=ThreeWay
 >>>>>>> Stashed changes
 dependency39.to=Bullet
+=======
+dependency32.to=Bullet
+dependency32.type=UsesDependency
+dependency33.from=Enemy
+dependency33.to=Util
+dependency33.type=UsesDependency
+dependency34.from=A_Boss
+dependency34.to=Game
+dependency34.type=UsesDependency
+dependency35.from=A_Boss
+dependency35.to=Weapon
+dependency35.type=UsesDependency
+dependency36.from=Asteroid_new
+dependency36.to=Game
+dependency36.type=UsesDependency
+dependency37.from=Asteroid_new
+dependency37.to=Vector
+dependency37.type=UsesDependency
+dependency38.from=Asteroid_new
+dependency38.to=Asteroid
+dependency38.type=UsesDependency
+dependency39.from=Asteroid_new
+dependency39.to=Util
+>>>>>>> Stashed changes
 dependency39.type=UsesDependency
 dependency4.from=A_Game
 dependency4.to=Ship
 dependency4.type=UsesDependency
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 dependency40.from=A_Pickup
 dependency40.to=Ship
@@ -268,10 +333,42 @@ dependency48.type=UsesDependency
 dependency49.from=Wave
 dependency49.to=Enemy
 >>>>>>> Stashed changes
+=======
+dependency40.from=Asteroid_new
+dependency40.to=Bullet
+dependency40.type=UsesDependency
+dependency41.from=A_Pickup
+dependency41.to=Ship
+dependency41.type=UsesDependency
+dependency42.from=PickUp
+dependency42.to=Ship
+dependency42.type=UsesDependency
+dependency43.from=A_Ship
+dependency43.to=Game
+dependency43.type=UsesDependency
+dependency44.from=Ship
+dependency44.to=Vector
+dependency44.type=UsesDependency
+dependency45.from=Ship
+dependency45.to=Game
+dependency45.type=UsesDependency
+dependency46.from=Ship
+dependency46.to=Asteroid
+dependency46.type=UsesDependency
+dependency47.from=FastFire
+dependency47.to=Bullet
+dependency47.type=UsesDependency
+dependency48.from=Weapon
+dependency48.to=Bullet
+dependency48.type=UsesDependency
+dependency49.from=ThreeWay
+dependency49.to=Bullet
+>>>>>>> Stashed changes
 dependency49.type=UsesDependency
 dependency5.from=A_Game
 dependency5.to=PowerUp
 dependency5.type=UsesDependency
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 dependency50.from=ShotGun
 dependency50.to=Util
@@ -313,18 +410,65 @@ dependency51.to=Vector
 dependency51.type=UsesDependency
 dependency6.from=Game
 >>>>>>> Stashed changes
+=======
+dependency50.from=ShotGun
+dependency50.to=Bullet
+dependency50.type=UsesDependency
+dependency51.from=ShotGun
+dependency51.to=Util
+dependency51.type=UsesDependency
+dependency52.from=HighDamage
+dependency52.to=Bullet
+dependency52.type=UsesDependency
+dependency53.from=A_Bullet
+dependency53.to=Ship
+dependency53.type=UsesDependency
+dependency54.from=A_Wave
+dependency54.to=Asteroid
+dependency54.type=UsesDependency
+dependency55.from=A_Wave
+dependency55.to=Game
+dependency55.type=UsesDependency
+dependency56.from=Wave
+dependency56.to=Game
+dependency56.type=UsesDependency
+dependency57.from=Wave
+dependency57.to=Asteroid
+dependency57.type=UsesDependency
+dependency58.from=Wave
+dependency58.to=Enemy
+dependency58.type=UsesDependency
+dependency59.from=Wave
+dependency59.to=WeavingEnemy
+dependency59.type=UsesDependency
+dependency6.from=A_Game
+>>>>>>> Stashed changes
 dependency6.to=TitleScreen
 dependency6.type=UsesDependency
+dependency60.from=Wave
+dependency60.to=Boss
+dependency60.type=UsesDependency
+dependency61.from=A_Vector
+dependency61.to=Vector
+dependency61.type=UsesDependency
+dependency62.from=Vector
+dependency62.to=Util
+dependency62.type=UsesDependency
 dependency7.from=Game
-dependency7.to=Ship
+dependency7.to=TitleScreen
 dependency7.type=UsesDependency
 dependency8.from=Game
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 dependency8.to=TitleScreen
+=======
+dependency8.to=Ship
+>>>>>>> Stashed changes
 dependency8.type=UsesDependency
 dependency9.from=Game
 dependency9.to=Wave
 dependency9.type=UsesDependency
+<<<<<<< Updated upstream
 editor.fx.0.height=694
 editor.fx.0.width=1294
 editor.fx.0.x=-7
@@ -345,6 +489,15 @@ editor.fx.0.y=-19
 height=694
 package.numDependencies=51
 package.numTargets=42
+>>>>>>> Stashed changes
+=======
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=852
+editor.fx.0.y=148
+height=1096
+package.numDependencies=62
+package.numTargets=47
 >>>>>>> Stashed changes
 project.charset=UTF-8
 publish.hasSource=false
@@ -369,9 +522,13 @@ target1.x=0
 target1.y=0
 target10.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target10.name=VecActor
 =======
 target10.name=Weapon
+>>>>>>> Stashed changes
+=======
+target10.name=VecActor
 >>>>>>> Stashed changes
 target10.showInterface=false
 target10.type=ClassTarget
@@ -380,9 +537,13 @@ target10.x=0
 target10.y=0
 target11.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target11.name=A_Boss
 =======
 target11.name=TitleScreen
+>>>>>>> Stashed changes
+=======
+target11.name=A_Boss
 >>>>>>> Stashed changes
 target11.showInterface=false
 target11.type=AbstractTarget
@@ -391,9 +552,13 @@ target11.x=0
 target11.y=0
 target12.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target12.name=Weapon
 =======
 target12.name=Boss
+>>>>>>> Stashed changes
+=======
+target12.name=Weapon
 >>>>>>> Stashed changes
 target12.showInterface=false
 target12.type=ClassTarget
@@ -402,9 +567,13 @@ target12.x=0
 target12.y=0
 target13.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target13.name=TitleScreen
 =======
 target13.name=Asteroid
+>>>>>>> Stashed changes
+=======
+target13.name=TitleScreen
 >>>>>>> Stashed changes
 target13.showInterface=false
 target13.type=ClassTarget
@@ -413,9 +582,13 @@ target13.x=0
 target13.y=0
 target14.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target14.name=Boss
 =======
 target14.name=UI
+>>>>>>> Stashed changes
+=======
+target14.name=Boss
 >>>>>>> Stashed changes
 target14.showInterface=false
 target14.type=ClassTarget
@@ -424,9 +597,13 @@ target14.x=0
 target14.y=0
 target15.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target15.name=Asteroid
 =======
 target15.name=A_Game
+>>>>>>> Stashed changes
+=======
+target15.name=Asteroid
 >>>>>>> Stashed changes
 target15.showInterface=false
 target15.type=ClassTarget
@@ -435,31 +612,43 @@ target15.x=0
 target15.y=0
 target16.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target16.name=UI
 =======
 target16.name=A_Ship
 >>>>>>> Stashed changes
+=======
+target16.name=UI
+>>>>>>> Stashed changes
 target16.showInterface=false
-target16.type=AbstractTarget
+target16.type=ClassTarget
 target16.width=120
 target16.x=0
 target16.y=0
 target17.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target17.name=A_Game
 =======
 target17.name=Enemy
 >>>>>>> Stashed changes
+=======
+target17.name=A_Game
+>>>>>>> Stashed changes
 target17.showInterface=false
-target17.type=ClassTarget
+target17.type=AbstractTarget
 target17.width=120
 target17.x=0
 target17.y=0
 target18.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target18.name=A_Ship
 =======
 target18.name=A_Wave
+>>>>>>> Stashed changes
+=======
+target18.name=A_Ship
 >>>>>>> Stashed changes
 target18.showInterface=false
 target18.type=AbstractTarget
@@ -468,12 +657,16 @@ target18.x=0
 target18.y=0
 target19.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target19.name=Enemy
 =======
 target19.name=A_Healthbar
 >>>>>>> Stashed changes
+=======
+target19.name=Enemy
+>>>>>>> Stashed changes
 target19.showInterface=false
-target19.type=AbstractTarget
+target19.type=ClassTarget
 target19.width=120
 target19.x=0
 target19.y=0
@@ -486,9 +679,13 @@ target2.x=0
 target2.y=0
 target20.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target20.name=A_Wave
 =======
 target20.name=Spawner
+>>>>>>> Stashed changes
+=======
+target20.name=A_Wave
 >>>>>>> Stashed changes
 target20.showInterface=false
 target20.type=AbstractTarget
@@ -496,6 +693,7 @@ target20.width=120
 target20.x=0
 target20.y=0
 target21.height=70
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 target21.name=A_Healthbar
 target21.showInterface=false
@@ -505,14 +703,23 @@ target21.name=EnemyType
 target21.showInterface=false
 target21.type=EnumTarget
 >>>>>>> Stashed changes
+=======
+target21.name=A_Healthbar
+target21.showInterface=false
+target21.type=AbstractTarget
+>>>>>>> Stashed changes
 target21.width=120
 target21.x=0
 target21.y=0
 target22.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target22.name=Spawner
 =======
 target22.name=Vector
+>>>>>>> Stashed changes
+=======
+target22.name=Spawner
 >>>>>>> Stashed changes
 target22.showInterface=false
 target22.type=ClassTarget
@@ -521,9 +728,13 @@ target22.x=0
 target22.y=0
 target23.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target23.name=EnemyType
 =======
 target23.name=ThreeWay
+>>>>>>> Stashed changes
+=======
+target23.name=EnemyType
 >>>>>>> Stashed changes
 target23.showInterface=false
 target23.type=EnumTarget
@@ -532,9 +743,13 @@ target23.x=0
 target23.y=0
 target24.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target24.name=Vector
 =======
 target24.name=Bullet
+>>>>>>> Stashed changes
+=======
+target24.name=Vector
 >>>>>>> Stashed changes
 target24.showInterface=false
 target24.type=ClassTarget
@@ -543,9 +758,13 @@ target24.x=0
 target24.y=0
 target25.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target25.name=ThreeWay
 =======
 target25.name=Player
+>>>>>>> Stashed changes
+=======
+target25.name=ThreeWay
 >>>>>>> Stashed changes
 target25.showInterface=false
 target25.type=ClassTarget
@@ -554,9 +773,13 @@ target25.x=0
 target25.y=0
 target26.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target26.name=Bullet
 =======
 target26.name=Healthbar
+>>>>>>> Stashed changes
+=======
+target26.name=Bullet
 >>>>>>> Stashed changes
 target26.showInterface=false
 target26.type=ClassTarget
@@ -565,9 +788,13 @@ target26.x=0
 target26.y=0
 target27.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target27.name=Player
 =======
 target27.name=I_Upgradeable
+>>>>>>> Stashed changes
+=======
+target27.name=Player
 >>>>>>> Stashed changes
 target27.showInterface=false
 target27.type=ClassTarget
@@ -576,20 +803,28 @@ target27.x=0
 target27.y=0
 target28.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target28.name=Healthbar
 =======
 target28.name=A_VecActor
 >>>>>>> Stashed changes
+=======
+target28.name=Healthbar
+>>>>>>> Stashed changes
 target28.showInterface=false
-target28.type=AbstractTarget
+target28.type=ClassTarget
 target28.width=120
 target28.x=0
 target28.y=0
 target29.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target29.name=I_Upgradeable
 =======
 target29.name=ShotGun
+>>>>>>> Stashed changes
+=======
+target29.name=I_Upgradeable
 >>>>>>> Stashed changes
 target29.showInterface=false
 target29.type=ClassTarget
@@ -605,9 +840,13 @@ target3.x=0
 target3.y=0
 target30.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target30.name=A_VecActor
 =======
 target30.name=A_PowerUp
+>>>>>>> Stashed changes
+=======
+target30.name=A_VecActor
 >>>>>>> Stashed changes
 target30.showInterface=false
 target30.type=AbstractTarget
@@ -616,9 +855,13 @@ target30.x=0
 target30.y=0
 target31.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target31.name=ShotGun
 =======
 target31.name=Asteroid_new
+>>>>>>> Stashed changes
+=======
+target31.name=ShotGun
 >>>>>>> Stashed changes
 target31.showInterface=false
 target31.type=ClassTarget
@@ -627,20 +870,28 @@ target31.x=0
 target31.y=0
 target32.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target32.name=A_PowerUp
 =======
 target32.name=GifImage
 >>>>>>> Stashed changes
+=======
+target32.name=A_PowerUp
+>>>>>>> Stashed changes
 target32.showInterface=false
-target32.type=ClassTarget
+target32.type=AbstractTarget
 target32.width=120
 target32.x=0
 target32.y=0
 target33.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target33.name=Asteroid_new
 =======
 target33.name=Wave
+>>>>>>> Stashed changes
+=======
+target33.name=WeavingEnemy
 >>>>>>> Stashed changes
 target33.showInterface=false
 target33.type=ClassTarget
@@ -649,9 +900,13 @@ target33.x=0
 target33.y=0
 target34.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target34.name=GifImage
 =======
 target34.name=Game
+>>>>>>> Stashed changes
+=======
+target34.name=Asteroid_new
 >>>>>>> Stashed changes
 target34.showInterface=false
 target34.type=ClassTarget
@@ -660,20 +915,28 @@ target34.x=0
 target34.y=0
 target35.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target35.name=Wave
 =======
 target35.name=A_Weapon
 >>>>>>> Stashed changes
+=======
+target35.name=GifImage
+>>>>>>> Stashed changes
 target35.showInterface=false
-target35.type=AbstractTarget
+target35.type=ClassTarget
 target35.width=120
 target35.x=0
 target35.y=0
 target36.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target36.name=Game
 =======
 target36.name=PowerUp
+>>>>>>> Stashed changes
+=======
+target36.name=Wave
 >>>>>>> Stashed changes
 target36.showInterface=false
 target36.type=ClassTarget
@@ -682,16 +945,21 @@ target36.x=0
 target36.y=0
 target37.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target37.name=A_Weapon
 =======
 target37.name=A_TitleScreen
 >>>>>>> Stashed changes
+=======
+target37.name=A_Button
+>>>>>>> Stashed changes
 target37.showInterface=false
-target37.type=AbstractTarget
+target37.type=ClassTarget
 target37.width=120
 target37.x=0
 target37.y=0
 target38.height=70
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 target38.name=PowerUp
 target38.showInterface=false
@@ -701,16 +969,25 @@ target38.name=A_Vector
 target38.showInterface=false
 target38.type=AbstractTarget
 >>>>>>> Stashed changes
+=======
+target38.name=Game
+target38.showInterface=false
+target38.type=ClassTarget
+>>>>>>> Stashed changes
 target38.width=120
 target38.x=0
 target38.y=0
 target39.height=70
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 target39.name=Stats
 target39.showInterface=false
 target39.type=ClassTarget
 =======
 target39.name=A_Enemy
+=======
+target39.name=A_Weapon
+>>>>>>> Stashed changes
 target39.showInterface=false
 target39.type=AbstractTarget
 >>>>>>> Stashed changes
@@ -719,22 +996,30 @@ target39.x=0
 target39.y=0
 target4.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target4.name=PickUp
 =======
 target4.name=A_Spawner
 >>>>>>> Stashed changes
+=======
+target4.name=PickUp
+>>>>>>> Stashed changes
 target4.showInterface=false
-target4.type=AbstractTarget
+target4.type=ClassTarget
 target4.width=120
 target4.x=0
 target4.y=0
 target40.height=70
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 target40.name=A_TitleScreen
 target40.showInterface=false
 target40.type=AbstractTarget
 =======
 target40.name=Ship
+=======
+target40.name=PowerUp
+>>>>>>> Stashed changes
 target40.showInterface=false
 target40.type=ClassTarget
 >>>>>>> Stashed changes
@@ -743,11 +1028,15 @@ target40.x=0
 target40.y=0
 target41.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target41.name=A_Vector
 target41.showInterface=false
 target41.type=AbstractTarget
 =======
 target41.name=HighDamage
+=======
+target41.name=Stats
+>>>>>>> Stashed changes
 target41.showInterface=false
 target41.type=ClassTarget
 >>>>>>> Stashed changes
@@ -756,9 +1045,13 @@ target41.x=0
 target41.y=0
 target42.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target42.name=A_Enemy
 =======
 target42.name=A_Bullet
+>>>>>>> Stashed changes
+=======
+target42.name=A_TitleScreen
 >>>>>>> Stashed changes
 target42.showInterface=false
 target42.type=AbstractTarget
@@ -766,21 +1059,35 @@ target42.width=120
 target42.x=0
 target42.y=0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target43.height=70
 target43.name=Ship
 target43.showInterface=false
 target43.type=ClassTarget
+=======
+target43.height=70
+target43.name=A_Vector
+target43.showInterface=false
+target43.type=AbstractTarget
+>>>>>>> Stashed changes
 target43.width=120
 target43.x=0
 target43.y=0
 target44.height=70
+<<<<<<< Updated upstream
 target44.name=HighDamage
 target44.showInterface=false
 target44.type=ClassTarget
+=======
+target44.name=A_Enemy
+target44.showInterface=false
+target44.type=AbstractTarget
+>>>>>>> Stashed changes
 target44.width=120
 target44.x=0
 target44.y=0
 target45.height=70
+<<<<<<< Updated upstream
 target45.name=A_Bullet
 target45.showInterface=false
 target45.type=AbstractTarget
@@ -793,12 +1100,37 @@ target5.name=A_Spawner
 target5.height=70
 target5.name=Util
 >>>>>>> Stashed changes
+=======
+target45.name=Ship
+target45.showInterface=false
+target45.type=ClassTarget
+target45.width=120
+target45.x=0
+target45.y=0
+target46.height=70
+target46.name=HighDamage
+target46.showInterface=false
+target46.type=ClassTarget
+target46.width=120
+target46.x=0
+target46.y=0
+target47.height=70
+target47.name=A_Bullet
+target47.showInterface=false
+target47.type=AbstractTarget
+target47.width=120
+target47.x=0
+target47.y=0
+target5.height=70
+target5.name=A_Spawner
+>>>>>>> Stashed changes
 target5.showInterface=false
-target5.type=ClassTarget
+target5.type=AbstractTarget
 target5.width=120
 target5.x=0
 target5.y=0
 target6.height=70
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 target6.name=Util
 target6.showInterface=false
@@ -808,10 +1140,16 @@ target6.name=A_UI
 target6.showInterface=false
 target6.type=AbstractTarget
 >>>>>>> Stashed changes
+=======
+target6.name=Util
+target6.showInterface=false
+target6.type=ClassTarget
+>>>>>>> Stashed changes
 target6.width=120
 target6.x=0
 target6.y=0
 target7.height=70
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 target7.name=A_Pickup
 target7.showInterface=false
@@ -821,14 +1159,23 @@ target7.name=I_Damageable
 target7.showInterface=false
 target7.type=InterfaceTarget
 >>>>>>> Stashed changes
+=======
+target7.name=A_Pickup
+target7.showInterface=false
+target7.type=AbstractTarget
+>>>>>>> Stashed changes
 target7.width=120
 target7.x=0
 target7.y=0
 target8.height=70
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 target8.name=A_UI
 =======
 target8.name=VecActor
+>>>>>>> Stashed changes
+=======
+target8.name=A_UI
 >>>>>>> Stashed changes
 target8.showInterface=false
 target8.type=AbstractTarget
@@ -836,6 +1183,7 @@ target8.width=120
 target8.x=0
 target8.y=0
 target9.height=70
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 target9.name=I_Damageable
 target9.showInterface=false
@@ -845,11 +1193,21 @@ target9.name=A_Boss
 target9.showInterface=false
 target9.type=AbstractTarget
 >>>>>>> Stashed changes
+=======
+target9.name=I_Damageable
+target9.showInterface=false
+target9.type=InterfaceTarget
+>>>>>>> Stashed changes
 target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< Updated upstream
 width=1294
 world.lastInstantiated=TitleScreen
+=======
+width=1936
+world.lastInstantiated=Game
+>>>>>>> Stashed changes
 xPosition=0
 yPosition=0

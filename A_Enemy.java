@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public abstract class A_Enemy extends Asteroid {
-    
+    //NR=>LQ probably not needed
     /** cooldown to drive towards a random point for 300 frames / 5 seconds **/
     protected int moveCooldown;
     

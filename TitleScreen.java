@@ -38,16 +38,20 @@ public class TitleScreen extends A_TitleScreen
         //(gifImg);                 
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         //GreenfootImage img = new GreenfootImage(500,500);
-        //(new Label("Click Anywhere to Contitue", 25), getWidth()/2, (int)(getHeight() * 0.7));
+        addObject(new Label("Click Anywhere to Contitue", 25), getWidth()/2, (int)(getHeight() * 0.7));
+        
     }
     
     public void act()
     {
         setImage();
-        myMusic.play();//NR=>HM just commenting this until you have music to use
+        if (!myMusic.isPlaying()){
+            myMusic.playLoop();
+        }
+        //myMusic.play();//NR=>HM just commenting this until you have music to use
         if (Greenfoot.mouseClicked(this))
         {//
-            Util.say(""+game);
+            myMusic.stop();
             Greenfoot.setWorld(game);
         }//
     }

@@ -13,7 +13,7 @@ public class Enemy extends A_Enemy {
         
         img = getImage();
         shot = new GreenfootSound("");
-        healthBar = new Healthbar();
+        //healthBar = new Healthbar(); NR=> enemies are one shot kills and do not need a healthbar
         speed = 4;
         cooldown = 90;
         vel = new Vector(-speed, 0);
