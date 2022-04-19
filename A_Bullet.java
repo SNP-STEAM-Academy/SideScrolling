@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class A_Bullet extends Actor
 {
-    protected World world;
+    protected Game game;
     protected Ship ship;
     protected int speed;
     protected int damage;

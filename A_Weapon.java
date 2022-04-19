@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class A_Weapon extends Actor
 {
-    protected World world;
+    protected Game game;
     protected Bullet[] bullets;
     
     protected int damage;
