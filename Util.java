@@ -52,9 +52,9 @@ public class Util
     }
     
     public static void say(String msg){
-        //if (Game.DEBUG == true){
+        if (Game.DEBUG == true){
             System.out.println(msg);
-        //}
+        }
     }
     
     

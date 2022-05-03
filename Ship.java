@@ -8,6 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ship extends A_Ship
 {
+    protected Vector size = new Vector(70, 30);
+    protected Vector half_size = new Vector(35, 15 );
+    
     /**
      * Main ship stuff
      */
@@ -43,6 +46,7 @@ public class Ship extends A_Ship
         
         //get a new velocity vector
         vel = new Vector();
+        
         if (Greenfoot.isKeyDown("w"))
         {
             up();
@@ -70,28 +74,28 @@ public class Ship extends A_Ship
     
     protected void checkBounds()
     {
-        if (pos.getX() > game.getWidth() - img.getWidth()/2)
+        if (pos.getX() > game.getWidth() - half_size.getX())
         {//right wall
-            pos = new Vector(game.getWidth() - img.getWidth()/2, pos.getY());
-            setLocation(pos);
+            pos = new Vector(game.getWidth() - half_size.getX(), pos.getY());
         }
         
-        if (pos.getX() < 0 + img.getWidth()/2)
+        if (pos.getX() <  half_size.getX())
         {//left wall
             //new Vector(img.getWidth()/2, pos.getY());
-            setLocation(new Vector(img.getWidth()/2, pos.getY()));
+            pos = new Vector(+ half_size.getX(), pos.getY());
+            //setLocation(new Vector(img.getWidth()/2, pos.getY()));
         }
         
-        if (pos.getY() > game.getHeight() - img.getHeight()/2) 
+        if (pos.getY() > game.getHeight() - half_size.getY()) 
         {//bottom wall
-            pos = new Vector(pos.getX(), game.getHeight() - img.getHeight()/2);
-            setLocation(pos);
+            pos = new Vector(pos.getX(), game.getHeight() - half_size.getY());
+            //setLocation(pos);
         }
         
-        if (pos.getY() < + 100 + img.getHeight()/2)
+        if (pos.getY() < + 100 + half_size.getY())
         {//top wall
-            pos = new Vector(pos.getX(), 100 + img.getHeight()/2);
-            setLocation(pos);
+            pos = new Vector(pos.getX(), 100 + half_size.getY());
+           
         }
     }
     

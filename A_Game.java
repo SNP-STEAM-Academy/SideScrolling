@@ -35,10 +35,7 @@ public  class A_Game extends World
     protected int state;
     
 
-    //public static boolean DEBUG = false;
-
-    boolean DEBUG = false;
-
+    public static boolean DEBUG = false;
     
     protected Ship ship;//NR prob not needed as the waves can specify the tiems
     protected PowerUp powerup;
